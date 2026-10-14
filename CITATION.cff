@@ -1,0 +1,47 @@
+cff-version: 1.2.0
+message: "If you use or refer to this work, please cite the Stage 3 preprint below."
+title: "FRM: Felix Runtime Module — papers and results"
+type: dataset
+authors:
+  - family-names: Felix
+    given-names: Junai P.
+    email: junai.felixx@gmail.com
+    affiliation: "Independent Researcher, Taipei, Taiwan"
+license: CC-BY-4.0
+repository-code: "https://github.com/recurse-root/FRMDevelopment"
+abstract: >-
+  Papers and results for FRM, the Felix Runtime Module, a bounded recursive
+  self-improvement runtime tested as FELIX-C3 against a published Level-4
+  definition, together with a companion preregistered study of transfer to
+  real bugs from QuixBugs and HumanEvalFix.
+keywords:
+  - recursive self-improvement
+  - self-referential improvement
+  - capability taxonomy
+  - autonomous operation
+  - preregistration
+  - automated program repair
+  - external validity
+preferred-citation:
+  type: article
+  title: "Level-4 Bounded Recursive Self-Improvement under a Published Definition: A Preregistered Test of a Self-Referential Improvement Mechanism"
+  authors:
+    - family-names: Felix
+      given-names: Junai P.
+  year: 2026
+  month: 10
+  version: "1.3"
+  publisher:
+    name: Zenodo
+  doi: "10.5281/zenodo.23138422"
+  url: "https://zenodo.org/records/23138422"
+references:
+  - type: article
+    title: "Do Self-Improved Repair Policies Transfer to Real Bugs? A Preregistered External-Benchmark Test of a Level-4 Bounded Self-Improving System"
+    authors:
+      - family-names: Felix
+        given-names: Junai P.
+    year: 2026
+    month: 10
+    version: "1.1"
+    notes: "Companion preprint."
