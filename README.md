@@ -24,7 +24,7 @@ and that includes the part of Imp that does the rewriting.
 |---|---|---|---|---|
 | Level-4 Bounded Recursive Self-Improvement under a Published Definition: A Preregistered Test of a Self-Referential Improvement Mechanism | Oct 2026, v1.3 | 47 | [PDF](papers/FELIX-C3_Level_4_RSI_Preregistered_Test_v1.3.pdf) | [Zenodo](https://zenodo.org/records/23138422) (holds v1.0) · DOI [10.5281/zenodo.23138422](https://doi.org/10.5281/zenodo.23138422) |
 | Do Self-Improved Repair Policies Transfer to Real Bugs? A Preregistered External-Benchmark Test of a Level-4 Bounded Self-Improving System | Oct 2026, v1.1 | 23 | [PDF](papers/FELIX-C7_External_Benchmark_Transfer_v1.1.pdf) | Companion preprint, from the author (no public record yet) |
-| FELIX: A Self-Evolving Organism Demonstrating Reproducible Recursive Self-Improvement via Intergenerational Metabolic Selection | May 2026 | 12 | [PDF](papers/FELIX_v4_Self-Evolving_Organism_RSI_2026-05.pdf) | [Zenodo](https://zenodo.org/records/20156848) · DOI [10.5281/zenodo.20156848](https://doi.org/10.5281/zenodo.20156848) |
+| FELIX: A Self-Evolving Organism Demonstrating Reproducible Recursive Self-Improvement via Intergenerational Metabolic Selection | May 2026, v1.0 | 12 | [PDF](papers/FELIX-v4_Self-Evolving_Organism_RSI_v1.0.pdf) | [Zenodo](https://zenodo.org/records/20156848) · DOI [10.5281/zenodo.20156848](https://doi.org/10.5281/zenodo.20156848) |
 
 All three papers are preprints and have not been peer reviewed. The
 [`papers/`](papers/) folder holds every PDF; its [`README.md`](papers/README.md)
@@ -102,7 +102,7 @@ v4 is general intelligence.
 │   ├── SHA256SUMS
 │   ├── FELIX-C3_Level_4_RSI_Preregistered_Test_v1.3.pdf
 │   ├── FELIX-C7_External_Benchmark_Transfer_v1.1.pdf
-│   └── FELIX_v4_Self-Evolving_Organism_RSI_2026-05.pdf
+│   └── FELIX-v4_Self-Evolving_Organism_RSI_v1.0.pdf
 ├── CITATION.cff
 ├── LICENSE
 └── README.md
