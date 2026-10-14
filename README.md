@@ -60,7 +60,8 @@ follow-up preregistered studies leave this conclusion unchanged.
 
 The 72 end-state policies from the Stage 3 missions were run, unmodified, on
 164 real bugs from QuixBugs and HumanEvalFix. The only new code was a
-sandboxed executor, which reproduced the original search exactly.
+sandboxed executor and a port of the frozen search. The port reproduced the
+original search exactly in 1,200 of 1,200 synthetic searches.
 
 | Result | Value |
 |---|---|
