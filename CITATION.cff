@@ -34,8 +34,8 @@ preferred-citation:
   version: "1.3"
   publisher:
     name: Zenodo
-  doi: "10.5281/zenodo.23138422"
-  url: "https://zenodo.org/records/23138422"
+  doi: "10.5281/zenodo.23366534"
+  url: "https://zenodo.org/records/23366534"
 references:
   - type: article
     title: "Do Self-Improved Repair Policies Transfer to Real Bugs? A Preregistered External-Benchmark Test of a Level-4 Bounded Self-Improving System"
@@ -45,7 +45,10 @@ references:
     year: 2026
     month: 10
     version: "1.1"
-    notes: "Companion preprint."
+    publisher:
+      name: Zenodo
+    doi: "10.5281/zenodo.23366502"
+    url: "https://zenodo.org/records/23366502"
   - type: article
     title: "FELIX: A Self-Evolving Organism Demonstrating Reproducible Recursive Self-Improvement via Intergenerational Metabolic Selection"
     authors:

@@ -6,8 +6,8 @@ from this directory.
 
 | File | Paper | Date | Pages | Source |
 |---|---|---|---|---|
-| [`FELIX-C3_Level_4_RSI_Preregistered_Test_v1.3.pdf`](FELIX-C3_Level_4_RSI_Preregistered_Test_v1.3.pdf) | Level-4 Bounded Recursive Self-Improvement under a Published Definition: A Preregistered Test of a Self-Referential Improvement Mechanism | Oct 2026, v1.3 | 47 | [Zenodo 23138422](https://doi.org/10.5281/zenodo.23138422) |
-| [`FELIX-C7_External_Benchmark_Transfer_v1.1.pdf`](FELIX-C7_External_Benchmark_Transfer_v1.1.pdf) | Do Self-Improved Repair Policies Transfer to Real Bugs? A Preregistered External-Benchmark Test of a Level-4 Bounded Self-Improving System | Oct 2026, v1.1 | 23 | Companion preprint (author) |
+| [`FELIX-C3_Level_4_RSI_Preregistered_Test_v1.3.pdf`](FELIX-C3_Level_4_RSI_Preregistered_Test_v1.3.pdf) | Level-4 Bounded Recursive Self-Improvement under a Published Definition: A Preregistered Test of a Self-Referential Improvement Mechanism | Oct 2026, v1.3 | 47 | [Zenodo 23366534](https://doi.org/10.5281/zenodo.23366534) |
+| [`FELIX-C7_External_Benchmark_Transfer_v1.1.pdf`](FELIX-C7_External_Benchmark_Transfer_v1.1.pdf) | Do Self-Improved Repair Policies Transfer to Real Bugs? A Preregistered External-Benchmark Test of a Level-4 Bounded Self-Improving System | Oct 2026, v1.1 | 23 | [Zenodo 23366502](https://doi.org/10.5281/zenodo.23366502) |
 | [`FELIX-v4_Self-Evolving_Organism_RSI_v1.0.pdf`](FELIX-v4_Self-Evolving_Organism_RSI_v1.0.pdf) | FELIX: A Self-Evolving Organism Demonstrating Reproducible Recursive Self-Improvement via Intergenerational Metabolic Selection | May 2026, v1.0 | 12 | [Zenodo 20156848](https://doi.org/10.5281/zenodo.20156848) |
 
 ## SHA-256
@@ -28,5 +28,8 @@ from this directory.
   so it is filed here as v1.0. Its own reference [2] cites an earlier FELIX
   preprint, which is not included here.
 - **FELIX-C3 v1.3.** This version adds four follow-up studies and a summary of
-  the transfer study. Zenodo record 23138422 currently holds v1.0.
-- **FELIX-C7 v1.1.** This version adds secondary analysis S7. It has no DOI yet.
+  the transfer study. It is Zenodo record 23366534, a new version of record
+  23138422 (v1.0). The concept DOI 10.5281/zenodo.23138421 always resolves to
+  the latest version.
+- **FELIX-C7 v1.1.** This version adds secondary analysis S7. It is Zenodo
+  record 23366502, the first public version.
