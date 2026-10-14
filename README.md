@@ -97,6 +97,8 @@ v4 is general intelligence.
 
 ```
 .
+├── .github/workflows/
+│   └── check-papers.yml      # verifies checksums and listings
 ├── papers/
 │   ├── README.md                 # sources, licenses and checksums
 │   ├── SHA256SUMS
@@ -132,6 +134,7 @@ paper and §11 of the C7 paper.
 | FELIX-C3 | 1.3 | Added four follow-up studies (transplant test and three redesigns of the rewriter) and a summary of the transfer study. |
 | FELIX-C7 | 1.0 | Primary analysis and secondaries S1–S6. |
 | FELIX-C7 | 1.1 | Added S7, the conditional replication on a later study's 72 end states. Nothing else changed. |
+| FELIX v4 | 1.0 | First release (Zenodo record 20156848). |
 
 ## Citation
 
