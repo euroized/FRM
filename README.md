@@ -3,6 +3,7 @@
 [![DOI](https://zenodo.org/badge/DOI/10.5281/zenodo.23138422.svg)](https://doi.org/10.5281/zenodo.23138422)
 ![Papers](https://img.shields.io/badge/papers-2-informational)
 ![Status](https://img.shields.io/badge/status-preprint-lightgrey)
+[![License: CC BY 4.0](https://img.shields.io/badge/License-CC_BY_4.0-lightgrey.svg)](LICENSE)
 
 Papers and results for **FRM**, the Felix Runtime Module, a bounded recursive
 self-improvement (RSI) runtime. The papers test the module as **FELIX-C3**.
@@ -72,6 +73,7 @@ improvement mechanism adds no benefit.
 │   ├── FELIX-C3_Level_4_RSI_Preregistered_Test_v1.3.pdf
 │   └── FELIX-C7_External_Benchmark_Transfer_v1.1.pdf
 ├── CITATION.cff
+├── LICENSE
 └── README.md
 ```
 
@@ -126,6 +128,14 @@ Citation metadata is in [`CITATION.cff`](CITATION.cff). On GitHub, use the
   note   = {Companion preprint, version 1.1}
 }
 ```
+
+## License
+
+The papers and other contents of this repository are licensed under the
+[Creative Commons Attribution 4.0 International License](LICENSE) (CC BY 4.0),
+the same license as the Zenodo record. You may share and adapt the material
+if you give appropriate credit. Third-party works cited in the papers, such as
+QuixBugs and HumanEvalFix, remain under their own licenses.
 
 ## Contact
 

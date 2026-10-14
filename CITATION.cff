@@ -7,6 +7,7 @@ authors:
     given-names: Junai P.
     email: junai.felixx@gmail.com
     affiliation: "Independent Researcher, Taipei, Taiwan"
+license: CC-BY-4.0
 repository-code: "https://github.com/recurse-root/FRMDevelopment"
 abstract: >-
   Papers and results for FRM, the Felix Runtime Module, a bounded recursive
