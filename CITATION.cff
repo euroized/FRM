@@ -13,7 +13,8 @@ abstract: >-
   Papers and results for FRM, the Felix Runtime Module, a bounded recursive
   self-improvement runtime tested as FELIX-C3 against a published Level-4
   definition, together with a companion preregistered study of transfer to
-  real bugs from QuixBugs and HumanEvalFix.
+  real bugs from QuixBugs and HumanEvalFix, and an earlier preprint on the
+  FELIX v4 self-evolving organism.
 keywords:
   - recursive self-improvement
   - self-referential improvement
@@ -45,3 +46,14 @@ references:
     month: 10
     version: "1.1"
     notes: "Companion preprint."
+  - type: article
+    title: "FELIX: A Self-Evolving Organism Demonstrating Reproducible Recursive Self-Improvement via Intergenerational Metabolic Selection"
+    authors:
+      - family-names: Felix
+        given-names: Junai P.
+    year: 2026
+    month: 5
+    publisher:
+      name: Zenodo
+    doi: "10.5281/zenodo.20156848"
+    url: "https://zenodo.org/records/20156848"

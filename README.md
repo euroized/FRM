@@ -1,7 +1,7 @@
 # FRM: Felix Runtime Module
 
 [![DOI](https://zenodo.org/badge/DOI/10.5281/zenodo.23138422.svg)](https://doi.org/10.5281/zenodo.23138422)
-![Papers](https://img.shields.io/badge/papers-2-informational)
+![Papers](https://img.shields.io/badge/papers-3-informational)
 ![Status](https://img.shields.io/badge/status-preprint-lightgrey)
 [![License: CC BY 4.0](https://img.shields.io/badge/License-CC_BY_4.0-lightgrey.svg)](LICENSE)
 
@@ -21,8 +21,10 @@ and that includes the part of Imp that does the rewriting.
 |---|---|---|---|
 | [Level-4 Bounded Recursive Self-Improvement under a Published Definition: A Preregistered Test of a Self-Referential Improvement Mechanism](papers/FELIX-C3_Level_4_RSI_Preregistered_Test_v1.3.pdf) | 1.3 | 47 | [10.5281/zenodo.23138422](https://doi.org/10.5281/zenodo.23138422) |
 | [Do Self-Improved Repair Policies Transfer to Real Bugs? A Preregistered External-Benchmark Test of a Level-4 Bounded Self-Improving System](papers/FELIX-C7_External_Benchmark_Transfer_v1.1.pdf) | 1.1 | 23 | Companion preprint |
+| [FELIX: A Self-Evolving Organism Demonstrating Reproducible Recursive Self-Improvement via Intergenerational Metabolic Selection](papers/FELIX_v4_Self-Evolving_Organism_RSI_2026-05.pdf) | May 2026 | 12 | [10.5281/zenodo.20156848](https://doi.org/10.5281/zenodo.20156848) |
 
-Both papers are preprints and have not been peer reviewed.
+All three papers are preprints and have not been peer reviewed. Each PDF's
+source and SHA-256 checksum are listed in [`papers/README.md`](papers/README.md).
 
 ## Key results
 
@@ -66,13 +68,37 @@ sandboxed executor, which reproduced the original search exactly.
 What transfers is the product of the improvement loop. Rewriting the
 improvement mechanism adds no benefit.
 
+### Earlier work: FELIX v4 organism (May 2026)
+
+This earlier preprint describes a different system: a population of artificial
+organisms. Each organism mutates its own structure, reproduces when its energy
+allows, and passes structure on to other organisms. Fitness is metabolic
+efficiency, the reduction in prediction loss per unit of energy spent. Five
+runs were made on five seeds (1, 7, 13, 42, 99), each lasting 380 steps, in a
+two-stage synthetic environment. There were no external training, gradient or
+code changes between generations.
+
+| Result | Value |
+|---|---|
+| Runs with a full positive chain, Gen 0 → Gen 1 → Gen 2 | 5 / 5 |
+| Sustained fitness, Gen 0 → Gen 1 → Gen 2 (mean) | 0.547 → 0.830 → 1.248 |
+| Improvement Gen 0 → Gen 2 | +129.7% mean (range +86.3% to +188.0%) |
+
+The paper states its own limits. All the data is synthetic, the chain is only
+three generations deep, everything ran on a single laptop, and no code or
+implementation details have been released. The paper does not claim that FELIX
+v4 is general intelligence.
+
 ## Repository layout
 
 ```
 .
 ├── papers/
+│   ├── README.md                 # sources, licenses and checksums
+│   ├── SHA256SUMS
 │   ├── FELIX-C3_Level_4_RSI_Preregistered_Test_v1.3.pdf
-│   └── FELIX-C7_External_Benchmark_Transfer_v1.1.pdf
+│   ├── FELIX-C7_External_Benchmark_Transfer_v1.1.pdf
+│   └── FELIX_v4_Self-Evolving_Organism_RSI_2026-05.pdf
 ├── CITATION.cff
 ├── LICENSE
 └── README.md
@@ -128,13 +154,24 @@ Citation metadata is in [`CITATION.cff`](CITATION.cff). On GitHub, use the
   month  = oct,
   note   = {Companion preprint, version 1.1}
 }
+
+@misc{felix2026organism,
+  author    = {Felix, Junai P.},
+  title     = {FELIX: A Self-Evolving Organism Demonstrating Reproducible Recursive
+               Self-Improvement via Intergenerational Metabolic Selection},
+  year      = {2026},
+  month     = may,
+  publisher = {Zenodo},
+  doi       = {10.5281/zenodo.20156848},
+  url       = {https://zenodo.org/records/20156848}
+}
 ```
 
 ## License
 
 The papers and other contents of this repository are licensed under the
 [Creative Commons Attribution 4.0 International License](LICENSE) (CC BY 4.0),
-the same license as the Zenodo record. You may share and adapt the material
+the same license as the Zenodo records. You may share and adapt the material
 if you give appropriate credit. Third-party works cited in the papers, such as
 QuixBugs and HumanEvalFix, remain under their own licenses.
 
