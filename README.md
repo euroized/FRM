@@ -103,6 +103,7 @@ v4 is general intelligence.
 │   ├── FELIX-C3_Level_4_RSI_Preregistered_Test_v1.3.pdf
 │   ├── FELIX-C7_External_Benchmark_Transfer_v1.1.pdf
 │   └── FELIX-v4_Self-Evolving_Organism_RSI_v1.0.pdf
+├── .zenodo.json                  # metadata for Zenodo releases
 ├── CITATION.cff
 ├── LICENSE
 └── README.md
