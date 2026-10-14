@@ -1,9 +1,10 @@
 # FRM: Felix Runtime Module
 
-[![DOI](https://zenodo.org/badge/DOI/10.5281/zenodo.23366534.svg)](https://doi.org/10.5281/zenodo.23366534)
+[![C3 paper DOI](https://img.shields.io/badge/C3_paper_DOI-10.5281%2Fzenodo.23366534-blue)](https://doi.org/10.5281/zenodo.23366534)
+[![Repository DOI](https://img.shields.io/badge/repository_DOI-10.5281%2Fzenodo.23366848-blue)](https://doi.org/10.5281/zenodo.23366848)
 [![Papers](https://img.shields.io/badge/papers-3-informational)](papers/)
 ![Status](https://img.shields.io/badge/status-preprint-lightgrey)
-[![Repository DOI](https://zenodo.org/badge/DOI/10.5281/zenodo.23366848.svg)](https://doi.org/10.5281/zenodo.23366848)
+[![Check papers](https://github.com/recurse-root/FRMDevelopment/actions/workflows/check-papers.yml/badge.svg)](https://github.com/recurse-root/FRMDevelopment/actions/workflows/check-papers.yml)
 [![License: CC BY 4.0](https://img.shields.io/badge/License-CC_BY_4.0-lightgrey.svg)](LICENSE)
 
 Papers and results for **FRM** (Felix Runtime Module, tested as **FELIX-C3**),
@@ -18,6 +19,18 @@ and that includes the part of Imp that does the rewriting.
 
 > **Looking for the papers?** Read the PDFs below, or browse the
 > [`papers/`](papers/) folder. Each paper also links to its original source.
+> The per-seed result tables are in [`data/`](data/) as CSV files.
+
+### Names used here
+
+| Name | Meaning |
+|---|---|
+| **FRM** | Felix Runtime Module, the self-improving runtime this repository is about |
+| **FELIX-C3** | The frozen build of FRM tested in the Stage 3 paper. The papers use this name. |
+| **Imp** | The improvement mechanism: the versioned object that FRM rewrites |
+| **C6, C6f, C6r** | The three Stage 3 conditions: Imp rewritable, Imp frozen, and rewrites adopted by coin flip |
+| **FELIX-C7** | Label for the companion study that tests FELIX-C3's policies on real bugs |
+| **FELIX v4** | An earlier, separate system (a population of artificial organisms), described in the May 2026 preprint |
 
 ## Papers
 
@@ -76,6 +89,14 @@ improvement mechanism adds no benefit.
 
 ### Earlier work: FELIX v4 organism (May 2026)
 
+> **How to read this paper.** FELIX v4 is exploratory work that came before
+> the preregistered programme. It was not preregistered. It reports 5 runs,
+> each starting from a population of 4 organisms, has no control condition and no
+> statistical tests, and measures each generation by its single best
+> organism. It is kept here for completeness and history. The preregistered
+> C3 and C7 studies above supersede it as evidence about recursive
+> self-improvement.
+
 This earlier preprint describes a different system: a population of artificial
 organisms. Each organism mutates its own structure, reproduces when its energy
 allows, and passes structure on to other organisms. Fitness is metabolic
@@ -100,7 +121,14 @@ v4 is general intelligence.
 ```
 .
 ├── .github/workflows/
-│   └── check-papers.yml      # verifies checksums and listings
+│   └── check-papers.yml      # verifies checksums, listings and statistics
+├── data/
+│   ├── README.md                 # sources, columns and how to verify
+│   ├── verify.py                 # recomputes the papers' statistics
+│   ├── felix-c3_per_seed_test_solve.csv
+│   ├── felix-c3_gate1_pilot.csv
+│   ├── felix-c7_per_seed_bugs_solved.csv
+│   └── felix-v4_generational_fitness.csv
 ├── papers/
 │   ├── README.md                 # sources, licenses and checksums
 │   ├── SHA256SUMS
@@ -117,11 +145,27 @@ v4 is general intelligence.
 
 The papers describe FELIX-C3 in terms of its roles, interfaces and parameter
 groups. The internal representations of the policy, the vocabulary, the
-evidence format and each Imp parameter are withheld. Every number in the
-papers is backed by SHA-256-committed records. The confidential audit packages
-(frozen sources, mission records and result files) are available to reviewers
-on request under a confidentiality agreement. The source code is not part of
-this repository.
+evidence format and each Imp parameter are withheld.
+
+What you can check here:
+
+- **The papers are authentic.** Every PDF is byte-identical to its copy on
+  Zenodo: its MD5 matches the checksum Zenodo publishes, and its SHA-256 is in
+  [`papers/SHA256SUMS`](papers/SHA256SUMS).
+- **The statistics follow from the printed tables.**
+  [`data/verify.py`](data/verify.py) recomputes the reported means, seed counts
+  and exact Wilcoxon p-values from the per-seed CSVs.
+
+What you cannot check here:
+
+- **Mission records, frozen sources and raw result files.** These are in
+  confidential audit packages, available to reviewers on request under a
+  confidentiality agreement. The papers list the SHA-256 of each one.
+- **The registration records.** The protocols and the freeze, gate and results
+  records were registered in a private document store with server timestamps,
+  not on a public registry.
+
+The source code is not part of this repository.
 
 The study design, implementation, analysis and drafting were carried out with
 substantial assistance from an AI system (Claude, Anthropic) under the author's
@@ -132,9 +176,11 @@ paper and §11 of the C7 paper.
 
 | Paper | Version | Changes |
 |---|---|---|
+| FELIX-C3 | 1.0 | First public release (Zenodo record 23138422, 4 October 2026). |
+| FELIX-C3 | 1.1 | Intermediate revision. Version 1.3 does not list its changes. |
 | FELIX-C3 | 1.2 | Added the statement on AI assistance. |
 | FELIX-C3 | 1.3 | Added four follow-up studies (transplant test and three redesigns of the rewriter) and a summary of the transfer study. |
-| FELIX-C7 | 1.0 | Primary analysis and secondaries S1–S6. |
+| FELIX-C7 | 1.0 | Primary analysis and secondaries S1–S6. Not released publicly. |
 | FELIX-C7 | 1.1 | Added S7, the conditional replication on a later study's 72 end states. Nothing else changed. |
 | FELIX v4 | 1.0 | First release (Zenodo record 20156848). |
 
@@ -197,3 +243,6 @@ QuixBugs and HumanEvalFix, remain under their own licenses.
 
 Junai P. Felix, Independent Researcher, Taipei, Taiwan
 [junai.felixx@gmail.com](mailto:junai.felixx@gmail.com)
+
+The same author appears as *Junai Philip Felix* on Zenodo and as *Junai Felix*
+in the FELIX v4 paper.

@@ -24,7 +24,9 @@ from this directory.
   Zenodo record 20156848. Its MD5, `11c3ba2dc6f6cd52fcd58f0d47d6a3a6`, matches
   the checksum Zenodo publishes for the file. The paper describes a
   population-based organism, a different system from the FELIX-C3 runtime
-  module. The Zenodo record has no version number and holds a single version,
+  module. It is exploratory work that came before the preregistered
+  programme. It was not preregistered and has no control condition or
+  statistical tests. The Zenodo record has no version number and holds a single version,
   so it is filed here as v1.0. Its own reference [2] cites an earlier FELIX
   preprint, which is not included here.
 - **FELIX-C3 v1.3.** This version adds four follow-up studies and a summary of
