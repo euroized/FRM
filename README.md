@@ -3,6 +3,7 @@
 [![DOI](https://zenodo.org/badge/DOI/10.5281/zenodo.23366534.svg)](https://doi.org/10.5281/zenodo.23366534)
 [![Papers](https://img.shields.io/badge/papers-3-informational)](papers/)
 ![Status](https://img.shields.io/badge/status-preprint-lightgrey)
+[![Repository DOI](https://zenodo.org/badge/DOI/10.5281/zenodo.23366848.svg)](https://doi.org/10.5281/zenodo.23366848)
 [![License: CC BY 4.0](https://img.shields.io/badge/License-CC_BY_4.0-lightgrey.svg)](LICENSE)
 
 Papers and results for **FRM** (Felix Runtime Module, tested as **FELIX-C3**),
@@ -140,6 +141,11 @@ paper and §11 of the C7 paper.
 
 Citation metadata is in [`CITATION.cff`](CITATION.cff). On GitHub, use the
 **Cite this repository** button in the sidebar.
+
+The repository itself is archived on Zenodo with each GitHub release. Its
+concept DOI, [10.5281/zenodo.23366848](https://doi.org/10.5281/zenodo.23366848),
+always resolves to the latest release. To cite a paper, use the paper's own DOI
+below.
 
 ```bibtex
 @misc{felix2026level4,
