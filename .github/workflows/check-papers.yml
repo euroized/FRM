@@ -1,0 +1,27 @@
+name: Check papers
+
+on:
+  push:
+    branches: [main]
+  pull_request:
+
+jobs:
+  check:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v4
+
+      - name: Verify SHA-256 checksums
+        working-directory: papers
+        run: sha256sum -c SHA256SUMS
+
+      - name: Check every PDF is listed
+        run: |
+          status=0
+          for path in papers/*.pdf; do
+            f=$(basename "$path")
+            grep -q "  $f\$" papers/SHA256SUMS || { echo "::error::$f is missing from papers/SHA256SUMS"; status=1; }
+            grep -qF "$f" papers/README.md   || { echo "::error::$f is missing from papers/README.md"; status=1; }
+            grep -qF "papers/$f" README.md   || { echo "::error::$f is missing from README.md"; status=1; }
+          done
+          exit $status
