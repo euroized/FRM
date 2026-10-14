@@ -1,0 +1,37 @@
+{
+  "title": "FRM: Felix Runtime Module — papers and results",
+  "upload_type": "dataset",
+  "creators": [
+    {
+      "name": "Felix, Junai P.",
+      "affiliation": "Independent Researcher, Taipei, Taiwan"
+    }
+  ],
+  "description": "<p>Papers and results for FRM, the Felix Runtime Module, a bounded recursive self-improvement runtime tested as FELIX-C3 against a published Level-4 definition, together with a companion preregistered study of transfer to real bugs from QuixBugs and HumanEvalFix, and an earlier preprint on the FELIX v4 self-evolving organism.</p><p>Each release of this record archives the GitHub repository <a href=\"https://github.com/recurse-root/FRMDevelopment\">recurse-root/FRMDevelopment</a>. To cite a paper, use that paper's own DOI, listed in the repository README.</p>",
+  "access_right": "open",
+  "license": "CC-BY-4.0",
+  "keywords": [
+    "recursive self-improvement",
+    "self-referential improvement",
+    "capability taxonomy",
+    "autonomous operation",
+    "preregistration",
+    "automated program repair",
+    "external validity"
+  ],
+  "related_identifiers": [
+    {
+      "identifier": "10.5281/zenodo.23138421",
+      "relation": "isSupplementTo",
+      "scheme": "doi",
+      "resource_type": "publication-preprint"
+    },
+    {
+      "identifier": "10.5281/zenodo.20156847",
+      "relation": "isSupplementTo",
+      "scheme": "doi",
+      "resource_type": "publication-preprint"
+    }
+  ],
+  "language": "eng"
+}
