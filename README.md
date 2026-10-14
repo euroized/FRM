@@ -5,8 +5,9 @@
 ![Status](https://img.shields.io/badge/status-preprint-lightgrey)
 [![License: CC BY 4.0](https://img.shields.io/badge/License-CC_BY_4.0-lightgrey.svg)](LICENSE)
 
-Papers and results for **FRM**, the Felix Runtime Module, a bounded recursive
-self-improvement (RSI) runtime. The papers test the module as **FELIX-C3**.
+Papers and results for **FRM** (Felix Runtime Module, tested as **FELIX-C3**),
+a bounded recursive self-improvement (RSI) runtime tested against a published
+Level-4 definition.
 
 FRM runs inside a fixed boundary that it cannot change. In each round it
 diagnoses failures, proposes policy revisions, screens them, and promotes a
