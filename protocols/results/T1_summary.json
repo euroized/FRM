@@ -1,0 +1,63 @@
+{
+ "descriptive": {
+  "ES": {
+   "development_families_pct": 27.9,
+   "evaluations_per_mission_k": 383.6,
+   "heldout_families_pct": 25.89,
+   "n": 24,
+   "promotions_per_mission": 0.54,
+   "test_solve_pct_round_0_16_32": [
+    27.32,
+    27.42,
+    27.4
+   ]
+  },
+  "LOOP": {
+   "development_families_pct": 42.45,
+   "evaluations_per_mission_k": 362.0,
+   "heldout_families_pct": 31.04,
+   "n": 24,
+   "promotions_per_mission": 5.83,
+   "test_solve_pct_round_0_16_32": [
+    27.32,
+    37.77,
+    39.6
+   ]
+  },
+  "RS": {
+   "development_families_pct": 29.01,
+   "evaluations_per_mission_k": 427.7,
+   "heldout_families_pct": 25.89,
+   "n": 24,
+   "promotions_per_mission": 1.38,
+   "test_solve_pct_round_0_16_32": [
+    27.32,
+    27.49,
+    28.23
+   ]
+  },
+  "heldout_LOOP_minus_ES_pp": {
+   "mean": 5.16,
+   "of": 24,
+   "positive_seeds": 19
+  },
+  "heldout_LOOP_minus_RS_pp": {
+   "mean": 5.16,
+   "of": 24,
+   "positive_seeds": 20
+  }
+ },
+ "freeze": "protocols/freeze/T1_FREEZE.json",
+ "gate1": "protocols/freeze/T1_GATE1.json",
+ "notes": [
+  "All 72 missions completed with exit code 0.",
+  "Evaluations are not capped per mission; the baselines spent more evaluations than the loop, so the comparison does not favour the loop on budget.",
+  "LOOP is Stage 3 condition C6f; its round-32 mean on these fresh seeds (39.60%) is close to the Stage 3 C6f mean (39.8%)."
+ ],
+ "results_csv_sha256": "d2fe7905fba1fff97a9b62dd8925625af748638ebaad5b3c271995d406b45930",
+ "study": "T1: outside baselines at matched budget (confirmatory, seeds 8601-8624)",
+ "verdicts": {
+  "T1-P LOOP - RS": "PASS",
+  "T1-S LOOP - ES": "PASS"
+ }
+}
