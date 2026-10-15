@@ -122,8 +122,14 @@ v4 is general intelligence.
 .
 ├── .github/workflows/
 │   └── check-papers.yml      # verifies checksums, listings and statistics
+├── arxiv/
+│   ├── README.md                 # how to build and submit to arXiv
+│   ├── main.tex, main.pdf        # consolidated manuscript
+│   ├── make_figures.py, build.sh
+│   └── figures/
 ├── data/
 │   ├── README.md                 # sources, columns and how to verify
+│   ├── frmstats.py               # exact Wilcoxon and bootstrap (stdlib only)
 │   ├── verify.py                 # recomputes the papers' statistics
 │   ├── felix-c3_per_seed_test_solve.csv
 │   ├── felix-c3_gate1_pilot.csv
@@ -135,11 +141,34 @@ v4 is general intelligence.
 │   ├── FELIX-C3_Level_4_RSI_Preregistered_Test_v1.3.pdf
 │   ├── FELIX-C7_External_Benchmark_Transfer_v1.1.pdf
 │   └── FELIX-v4_Self-Evolving_Organism_RSI_v1.0.pdf
+├── protocols/
+│   ├── PREREGISTRATION.md        # draft: tests T1–T3, not yet run
+│   ├── power.py, power_results.txt
+│   ├── analyze.py                # applies the registered decision rules
+│   └── results_template.csv
 ├── .zenodo.json                  # metadata for Zenodo releases
 ├── CITATION.cff
 ├── LICENSE
 └── README.md
 ```
+
+## Manuscript and planned tests
+
+- **[`arxiv/`](arxiv/)** holds a consolidated manuscript of the C3 and C7
+  results, prepared for arXiv ([PDF](arxiv/main.pdf)). It leads with the
+  central finding: the system meets the Level-4 definition, but its recursion
+  contributes nothing measurable. It reports no new experiments.
+- **[`protocols/`](protocols/)** holds a preregistration draft for three
+  follow-up tests:
+  - **T1:** the improvement loop against random search and an evolution
+    strategy at the same budget
+  - **T2:** the best any fixed Imp can do
+  - **T3:** a long-horizon, non-stationary test of the recursion, powered at
+    48 seeds
+
+  It also holds the power analysis and the script that applies the decision
+  rules. **None of these tests has been run.** They need the FRM source, which
+  is not in this repository.
 
 ## Disclosure and reproducibility
 
