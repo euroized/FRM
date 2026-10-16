@@ -9,7 +9,8 @@ zero differences are dropped, tied absolute differences get midranks, and the
 null distribution of the doubled signed-rank statistic is computed exactly.
 
 The per-seed values in the papers are printed rounded (C3 test solve rates to
-0.1 percentage points, C7 bug counts to 0.01), so recomputed means may differ
+0.1 percentage points; C9 rates and C7 and C9 bug counts to 0.01), so recomputed
+means may differ
 from the reported ones in the last printed digit, and p-values from rounded
 inputs are compared within a tolerance.
 """
@@ -119,6 +120,36 @@ for label, d, want_signs, want_p, sided in [
         ("S2 C6 - C6r", diff(c7, "c6", "c6r"), (10, 14, 0), 0.35, 2),
         ("S4 budget 48, C6 - r0", diff(c7, "c6_b48", "r0_b48"), (19, 5, 0), 4.3e-4, 1),
         ("S5 C6 - permuted", diff(c7, "c6", "c6_permuted"), (22, 2, 0), 3.0e-7, 1)]:
+    check_eq(f"{label} seeds +/-/0", signs([round(x, 6) for x in d]), want_signs)
+    p = wilcoxon_upper(d) if sided == 1 else wilcoxon_two_sided(d)
+    check_p(f"{label} {'one' if sided == 1 else 'two'}-sided Wilcoxon", p, want_p)
+
+# FELIX-C9, Table 11 (confirmatory, seeds 7901-7924) --------------------------
+print("FELIX-C9 structural self-modification (Table 11)")
+c9 = load("felix-c9_per_seed.csv")
+check_eq("seeds", len(c9), 24)
+check_eq("campaign = seed index mod 2", [int(r["campaign"]) for r in c9], [i % 2 for i in range(24)])
+for key, want in [("e_r32_pct", 43.03), ("d_r32_pct", 40.47), ("r_r32_pct", 39.52), ("t_r32_pct", 46.15),
+                  ("bugs_e", 25.36), ("bugs_d", 24.97), ("bugs_r0", 20.74)]:
+    check(f"mean {key}", mean(col(c9, key)), want, 0.011)
+check("E - D column equals e - d (max abs gap)",
+      max(abs(x - y) for x, y in zip(diff(c9, "e_r32_pct", "d_r32_pct"), col(c9, "e_minus_d_pp"))), 0.0, 0.011)
+c9_0 = [r for r in c9 if r["campaign"] == "0"]
+c9_1 = [r for r in c9 if r["campaign"] == "1"]
+check_eq("campaign 0: E identical to T on every seed",
+         all(r["e_r32_pct"] == r["t_r32_pct"] for r in c9_0), True)
+for label, d, want_mean, want_signs, want_p, sided in [
+        ("B-1 E - D", diff(c9, "e_r32_pct", "d_r32_pct"), 2.57, (18, 6, 0), 0.0028, 1),
+        ("B-2 E - R", diff(c9, "e_r32_pct", "r_r32_pct"), 3.52, (15, 7, 2), 0.0011, 1),
+        ("T - D", diff(c9, "t_r32_pct", "d_r32_pct"), 5.68, (22, 2, 0), 3e-7, 1),
+        ("E - D, campaign 0", diff(c9_0, "e_r32_pct", "d_r32_pct"), 5.70, (12, 0, 0), 0.0002, 1),
+        ("E - D, campaign 1", diff(c9_1, "e_r32_pct", "d_r32_pct"), -0.57, (6, 6, 0), 0.66, 1),
+        ("E - T", diff(c9, "e_r32_pct", "t_r32_pct"), -3.11, (1, 11, 12), 0.001, 2),
+        ("R - D", diff(c9, "r_r32_pct", "d_r32_pct"), -0.95, (8, 14, 2), 0.049, 2),
+        ("S-3 bugs E - D", diff(c9, "bugs_e", "bugs_d"), 0.39, (13, 11, 0), 0.52, 2),
+        ("S-3 bugs E - r0", diff(c9, "bugs_e", "bugs_r0"), 4.62, (24, 0, 0), 6e-8, 1),
+        ("S-3 bugs D - r0", diff(c9, "bugs_d", "bugs_r0"), 4.23, (23, 1, 0), 1e-7, 1)]:
+    check(f"{label} mean", mean(d), want_mean, 0.011)
     check_eq(f"{label} seeds +/-/0", signs([round(x, 6) for x in d]), want_signs)
     p = wilcoxon_upper(d) if sided == 1 else wilcoxon_two_sided(d)
     check_p(f"{label} {'one' if sided == 1 else 'two'}-sided Wilcoxon", p, want_p)

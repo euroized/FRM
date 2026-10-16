@@ -1,4 +1,12 @@
-# arXiv manuscript
+# arXiv manuscript (superseded, do not submit)
+
+> **Superseded.** This draft predates the FELIX-C9 study. Its central claim,
+> that the recursion "contributes nothing measurable", no longer describes the
+> programme: in C9 the system's self-rewriting met the preregistered causal
+> criteria for the first time (in-distribution only). The paper to submit to
+> arXiv is the synthesis,
+> [*Reach, Not Judgement*](../papers/FRM_Synthesis_Reach_Not_Judgement_v1.0.pdf).
+> This folder is kept only as a record and will be removed.
 
 **Meeting a Definition of Recursive Self-Improvement Is Not Evidence That the
 Recursion Helps: A Preregistered Test with Counterfactual Controls**

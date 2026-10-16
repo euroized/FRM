@@ -9,6 +9,7 @@ rounding. Nothing here comes from the confidential audit packages.
 | [`felix-c3_per_seed_test_solve.csv`](felix-c3_per_seed_test_solve.csv) | FELIX-C3 v1.3, Appendix A, Table 24 (p. 44) | 24 confirmatory seeds (7101–7124) |
 | [`felix-c3_gate1_pilot.csv`](felix-c3_gate1_pilot.csv) | FELIX-C3 v1.3, §9.3, Table 10 (p. 18) | 8 pilot seeds (3201–3208) |
 | [`felix-c7_per_seed_bugs_solved.csv`](felix-c7_per_seed_bugs_solved.csv) | FELIX-C7 v1.1, Appendix A, Table 7 (p. 22) | 24 seeds (7101–7124) |
+| [`felix-c9_per_seed.csv`](felix-c9_per_seed.csv) | FELIX-C9 v1.1, Appendix A, Table 11 (p. 22) | 24 confirmatory seeds (7901–7924) |
 | [`felix-v4_generational_fitness.csv`](felix-v4_generational_fitness.csv) | FELIX v4, §5.1, Table 1 (p. 7) | 5 runs |
 
 ## Columns
@@ -31,6 +32,21 @@ rewritable), C6f (Imp frozen) and C6r (rewrites adopted by coin flip).
 **`felix-c3_gate1_pilot.csv`**: test solve rate as a fraction, printed to
 0.001, on the 12 development families only. The columns are C6 at rounds 0,
 16 and 32, then C6f and C6r at round 32.
+
+**`felix-c9_per_seed.csv`**: round-32 test solve rate in percent on the
+seed's 320 test tasks, and real bugs solved out of 164 (mean over 8 tie-break
+streams), both printed to 0.01. Seeds are assigned to campaign
+`seed index mod 2`.
+
+| Column | Meaning |
+|---|---|
+| `seed`, `campaign` | Confirmatory seed, and the campaign whose final Imp arm E carries |
+| `e_r32_pct` | E: the campaign's evolved Imp |
+| `d_r32_pct` | D: the default Imp |
+| `r_r32_pct` | R: evidence-free replay of the campaign (same number of adopted edits, random generations) |
+| `t_r32_pct` | T: the designer's best development setting (reported only) |
+| `e_minus_d_pp` | E − D as printed |
+| `bugs_e`, `bugs_d`, `bugs_r0` | Real bugs solved by E, D and the empty starting policy r0 |
 
 **`felix-c7_per_seed_bugs_solved.csv`**: real bugs solved out of 164, as the
 mean over 8 tie-break streams, printed to 0.01. The budget is 12 evaluations
@@ -57,8 +73,9 @@ are:
 - every reported mean
 - the seed counts
 - the Imp-activity totals
-- the exact Wilcoxon p-values for C3 criteria A-4, B-1 and B-2, and for C7
-  contrasts P1, S1, S2, S4 and S5
+- the exact Wilcoxon p-values for C3 criteria A-4, B-1 and B-2, for C7
+  contrasts P1, S1, S2, S4 and S5, and for C9 criteria B-1 and B-2, the
+  per-campaign split, T − D, E − T, R − D and the S-3 real-bug contrasts
 - the v4 generational gains
 
 ```
@@ -68,5 +85,6 @@ python3 data/verify.py
 Because the tables are rounded, recomputed means can differ from the reported
 values in the last printed digit. Recomputed p-values are accepted within a
 factor of two. In practice the C7 p-values agree to the printed precision, and
-the C3 ones differ only slightly, for example 0.257 against the reported 0.23
-for B-1. CI runs this script on every push and pull request.
+the C3 and C9 ones differ only slightly, for example 0.257 against the
+reported 0.23 for C3 B-1, and 0.0033 against 0.0028 for C9 B-1. (Rounding each
+C9 rate to its exact value on 320 tasks recovers 0.0028.) CI runs this script on every push and pull request.
