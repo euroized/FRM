@@ -349,7 +349,7 @@ QuixBugs and HumanEvalFix, remain under their own licenses.
 ## Contact
 
 Junai P. Felix, Independent Researcher, Taipei, Taiwan
-[junai.felixx@gmail.com](mailto:junai.felixx@gmail.com)
+[junai.felixx@gmail.com](mailto:junai.felixx@gmail.com) · ORCID [0009-0006-1641-0399](https://orcid.org/0009-0006-1641-0399)
 
 The same author appears as *Junai Philip Felix* on Zenodo and as *Junai Felix*
 in the FELIX v4 paper.
