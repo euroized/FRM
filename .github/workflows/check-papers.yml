@@ -25,3 +25,9 @@ jobs:
             grep -qF "papers/$f" README.md   || { echo "::error::$f is missing from README.md"; status=1; }
           done
           exit $status
+
+      - name: Recompute reported statistics from data/
+        run: python3 data/verify.py
+
+      - name: Self-test the follow-up analysis on synthetic data
+        run: python3 protocols/analyze.py --selftest

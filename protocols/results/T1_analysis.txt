@@ -1,0 +1,7 @@
+T1 (round 32, n = 24 seeds)
+  T1-P LOOP - RS: mean +11.37 pp, 95% CI [+10.20, +12.50], seeds +/-/0 24/0/0, one-sided exact Wilcoxon p = 5.96e-08
+    -> primary: PASS (rule: p < 0.01 and mean >= +0.5 pp)
+  T1-S LOOP - ES: mean +12.20 pp, 95% CI [+11.04, +13.33], seeds +/-/0 24/0/0, one-sided exact Wilcoxon p = 5.96e-08
+    -> secondary: PASS (rule: p < 0.01 and mean >= +0.5 pp)
+T2: no results at round 32; not evaluated
+T3: no results at round 128; not evaluated

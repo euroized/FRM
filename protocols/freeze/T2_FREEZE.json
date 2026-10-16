@@ -1,0 +1,49 @@
+{
+ "build": {
+  "files_sha256": {
+   "baselines.py": "e19862e89e78081d6c4837ce4aa699a21487eed7ab8294751baa17265a7c3f88",
+   "host.py": "9ce16966d7b973ada54063b3a0631da2878b3e297a8775739d8ff3823d79ef49",
+   "impmech.py": "4491b1ab7f25671dcdd4e901458ca86af05ff06e8e393088c6138879a11f4f06",
+   "levels.py": "ef4107850d02f11827a330a0e5cff05bd5c500423821a329e07c0875d048e34b",
+   "mission_t.py": "595605047cf5111c4dadec00f3444a63ee480f1db13f5fe7cc43d1da185a73b1",
+   "stats.py": "ee8c288d9207f1ded2a896826c1a5da33e7f0c8c4033681f4753e90a3cb7d0c6"
+  },
+  "numpy": "2.4.6",
+  "python": "3.11.17",
+  "runners_sha256": {
+   "t23.py": "0f6e430151bb74b2faaac7c7433c97e0410e82c7bf2645430212965253dd94fc",
+   "trun.py": "309499af4f6941713f12add408536615ee2d9049d3385b2089258ea07cc69707"
+  },
+  "scikit_learn": "1.9.1"
+ },
+ "confirmation": {
+  "arms": {
+   "BEST": "BEST configuration, frozen",
+   "DEFAULT": "default Imp, frozen"
+  },
+  "if_best_is_default": "no confirmation is run; the estimate is reported as: no searched configuration beat the default on the panel",
+  "missions": "32 rounds, trained on the 12 development families, tested on all 16 (as Stage 3)",
+  "seeds": "8701-8724"
+ },
+ "deviations_from_draft": [
+  "Search reduced from 64 configurations x 8 panel seeds to 32 x 4, for compute; the estimate of the best fixed Imp is therefore less thorough, and BOUNDED can be claimed only for the searched space.",
+  "Configuration distributions were specified at this freeze, not in the draft.",
+  "Registration is the public GitHub commit, not OSF."
+ ],
+ "estimate": "T2-P = BEST - DEFAULT at round 32 with a 95% bootstrap interval; BOUNDED if the upper limit is < +1.0 pp, HEADROOM otherwise (protocols/analyze.py)",
+ "protocol": {
+  "commit": "4908d9bd7bf67073b0222e464cfa168c4a110fe9",
+  "file": "protocols/PREREGISTRATION.md"
+ },
+ "search": {
+  "configurations": "the default Imp plus 32 random configurations, drawn with random.Random(20261015)",
+  "configurations_sha256": "03d72771075c18c4f3d1ab5b2cd0a244e5a394c2b8cd026ca6be5261067300d6",
+  "distributions": "multiplicative parameters log-uniform within their registered bounds (proposal and screening-related biases in [0.05, 8], step scale in [0.2, 4], sampling budget in [300, 4000]); integer edit count uniform on 0..8; operator mixture Dirichlet(1); partner base uniform in [0.05, 0.95]; screening penalty uniform in [0, 3]. Editing-procedure parameters are irrelevant with Imp frozen and keep their defaults.",
+  "missions": "Imp frozen at each configuration (condition C6f with that initial Imp), 32 rounds, trained and tested on the 12 development families",
+  "panel_seeds": "1501-1504",
+  "selection": "BEST = highest mean round-32 test solve rate over the panel; ties to the lower index; the default is index 0"
+ },
+ "status": "frozen before any T2 mission was run",
+ "study": "T2: the best a fixed Imp can do (reduced design)",
+ "utc": "2026-10-15T13:10:20Z"
+}

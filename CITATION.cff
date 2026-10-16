@@ -1,5 +1,5 @@
 cff-version: 1.2.0
-message: "If you use or refer to this work, please cite the Stage 3 preprint below."
+message: "If you use or refer to this work, please cite the paper you rely on. The Stage 3 preprint below is the citation with a DOI; the synthesis paper is the overview of the whole programme."
 title: "FRM: Felix Runtime Module — papers and results"
 type: dataset
 authors:
@@ -15,11 +15,14 @@ identifiers:
     value: "10.5281/zenodo.23366848"
     description: "Concept DOI for all archived releases of this repository"
 abstract: >-
-  Papers and results for FRM, the Felix Runtime Module, a bounded recursive
-  self-improvement runtime tested as FELIX-C3 against a published Level-4
-  definition, together with a companion preregistered study of transfer to
-  real bugs from QuixBugs and HumanEvalFix, and an earlier preprint on the
-  FELIX v4 self-evolving organism.
+  Papers and results for FRM, the Felix Runtime Module, a bounded
+  self-improving program-repair system tested in nine preregistered studies
+  against a published Level-4 definition of recursive self-improvement. The
+  repository holds the synthesis of the programme, the Stage 3 (FELIX-C3)
+  Level-4 test, the FELIX-C7 real-bug transfer study, the FELIX-C9 study of
+  structural self-modification, per-seed result tables with a script that
+  recomputes the reported statistics, a registered follow-up test (T1) with
+  its results, and an earlier preprint on the FELIX v4 self-evolving organism.
 keywords:
   - recursive self-improvement
   - self-referential improvement
@@ -28,6 +31,8 @@ keywords:
   - preregistration
   - automated program repair
   - external validity
+  - self-modification
+  - generalisation
 preferred-citation:
   type: article
   title: "Level-4 Bounded Recursive Self-Improvement under a Published Definition: A Preregistered Test of a Self-Referential Improvement Mechanism"
@@ -42,6 +47,24 @@ preferred-citation:
   doi: "10.5281/zenodo.23366534"
   url: "https://zenodo.org/records/23366534"
 references:
+  - type: article
+    title: "Reach, Not Judgement: What Nine Preregistered Studies Show About When Self-Modification Pays Off"
+    authors:
+      - family-names: Felix
+        given-names: Junai P.
+    year: 2026
+    month: 10
+    version: "1.0"
+    notes: "Preprint. Not yet deposited on Zenodo or arXiv; PDF in papers/ of this repository."
+  - type: article
+    title: "Rewriting the Structure of Its Own Improvement Mechanism: A Preregistered Causal Test of Bounded Recursive Self-Improvement"
+    authors:
+      - family-names: Felix
+        given-names: Junai P.
+    year: 2026
+    month: 10
+    version: "1.1"
+    notes: "Preprint. Not yet deposited on Zenodo or arXiv; PDF in papers/ of this repository."
   - type: article
     title: "Do Self-Improved Repair Policies Transfer to Real Bugs? A Preregistered External-Benchmark Test of a Level-4 Bounded Self-Improving System"
     authors:

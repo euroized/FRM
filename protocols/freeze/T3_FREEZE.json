@@ -1,0 +1,87 @@
+{
+ "build": {
+  "files_sha256": {
+   "baselines.py": "e19862e89e78081d6c4837ce4aa699a21487eed7ab8294751baa17265a7c3f88",
+   "host.py": "9ce16966d7b973ada54063b3a0631da2878b3e297a8775739d8ff3823d79ef49",
+   "impmech.py": "4491b1ab7f25671dcdd4e901458ca86af05ff06e8e393088c6138879a11f4f06",
+   "levels.py": "ef4107850d02f11827a330a0e5cff05bd5c500423821a329e07c0875d048e34b",
+   "mission_t.py": "595605047cf5111c4dadec00f3444a63ee480f1db13f5fe7cc43d1da185a73b1",
+   "stats.py": "ee8c288d9207f1ded2a896826c1a5da33e7f0c8c4033681f4753e90a3cb7d0c6"
+  },
+  "numpy": "2.4.6",
+  "python": "3.11.17",
+  "runners_sha256": {
+   "t23.py": "0f6e430151bb74b2faaac7c7433c97e0410e82c7bf2645430212965253dd94fc",
+   "trun.py": "309499af4f6941713f12add408536615ee2d9049d3385b2089258ea07cc69707"
+  },
+  "scikit_learn": "1.9.1"
+ },
+ "design": {
+  "arms": [
+   "C6",
+   "C6f",
+   "C6r"
+  ],
+  "rounds": 128,
+  "schedule_rule": "phase p trains on the 6 development families ranked first by sha256(t3_freeze_hash:p:family)",
+  "seeds": "8801-8808",
+  "test_checkpoints": [
+   0,
+   32,
+   64,
+   96,
+   128
+  ],
+  "test_families": "all 16, throughout",
+  "training_schedule": {
+   "phase_len": 32,
+   "phases": [
+    [
+     "absdiff",
+     "avg_floor",
+     "between",
+     "floordiv",
+     "lin2",
+     "sum_even"
+    ],
+    [
+     "absdiff",
+     "between",
+     "clamp",
+     "floordiv",
+     "scaled_sum",
+     "sum_clip"
+    ],
+    [
+     "avg_floor",
+     "clamp",
+     "floordiv",
+     "scaled_sum",
+     "span",
+     "sum_even"
+    ],
+    [
+     "absdiff",
+     "dot",
+     "lin2",
+     "sign3",
+     "span",
+     "sum_clip"
+    ]
+   ]
+  }
+ },
+ "deviations_from_draft": [
+  "Only the 8-seed pilot is run; the 48-seed confirmatory T3 is not run in this session, for compute. No pass/fail claim about recursion is made from the pilot.",
+  "Registration is the public GitHub commit, not OSF."
+ ],
+ "protocol": {
+  "commit": "4908d9bd7bf67073b0222e464cfa168c4a110fe9",
+  "file": "protocols/PREREGISTRATION.md"
+ },
+ "reporting": "Pilot only, descriptive: C6 - C6f and C6 - C6r at each checkpoint with seed counts; the pilot SD of C6 - C6f at round 128 and the confirmatory seed count implied by n = ceil(48 x (s_pilot / 2.06)^2).",
+ "status": "frozen before any T3 mission was run",
+ "study": "T3 pilot: long-horizon, non-stationary test of the recursion",
+ "t3_freeze_hash": "5008d48f99b7be86cca2449ca1f4ed7b2fc38fc0a8bac4f5137cb2d6ef0c9d2d",
+ "utc": "2026-10-15T13:10:20Z"
+}

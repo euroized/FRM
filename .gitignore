@@ -3,3 +3,10 @@ Thumbs.db
 *~
 .vscode/
 .idea/
+arxiv/*.aux
+arxiv/*.log
+arxiv/*.out
+arxiv/*.fls
+arxiv/*.fdb_latexmk
+arxiv/arxiv-submission.tar.gz
+__pycache__/
