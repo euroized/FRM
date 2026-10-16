@@ -59,7 +59,7 @@ improvement loop learns transfers to real bugs, replicated three times.
 | Rewriting the Structure of Its Own Improvement Mechanism: A Preregistered Causal Test of Bounded Recursive Self-Improvement (FELIX-C9) | Oct 2026, v1.1 | 23 | [PDF](papers/FELIX-C9_Structural_Self-Modification_Preregistered_Test_v1.1.pdf) | This repository; not yet on Zenodo or arXiv |
 | Level-4 Bounded Recursive Self-Improvement under a Published Definition: A Preregistered Test of a Self-Referential Improvement Mechanism (FELIX-C3) | Oct 2026, v1.3 | 47 | [PDF](papers/FELIX-C3_Level_4_RSI_Preregistered_Test_v1.3.pdf) | [Zenodo](https://zenodo.org/records/23366534) · DOI [10.5281/zenodo.23366534](https://doi.org/10.5281/zenodo.23366534) |
 | Do Self-Improved Repair Policies Transfer to Real Bugs? A Preregistered External-Benchmark Test of a Level-4 Bounded Self-Improving System (FELIX-C7) | Oct 2026, v1.1 | 23 | [PDF](papers/FELIX-C7_External_Benchmark_Transfer_v1.1.pdf) | [Zenodo](https://zenodo.org/records/23366502) · DOI [10.5281/zenodo.23366502](https://doi.org/10.5281/zenodo.23366502) |
-| FELIX: A Self-Evolving Organism Demonstrating Reproducible Recursive Self-Improvement via Intergenerational Metabolic Selection | May 2026, v1.0 | 12 | [PDF](papers/FELIX-v4_Self-Evolving_Organism_RSI_v1.0.pdf) | [Zenodo](https://zenodo.org/records/20156848) · DOI [10.5281/zenodo.20156848](https://doi.org/10.5281/zenodo.20156848) |
+| FELIX: A Self-Evolving Organism Demonstrating Reproducible Recursive Self-Improvement via Intergenerational Metabolic Selection | May 2026, v1.0 | 12 | [PDF](papers/earlier/FELIX-v4_Self-Evolving_Organism_RSI_v1.0.pdf) | [Zenodo](https://zenodo.org/records/20156848) · DOI [10.5281/zenodo.20156848](https://doi.org/10.5281/zenodo.20156848) |
 
 All five papers are preprints and have not been peer reviewed. The
 [`papers/`](papers/) folder holds every PDF; its [`README.md`](papers/README.md)
@@ -197,7 +197,8 @@ that FELIX v4 is general intelligence.
 │   ├── FELIX-C9_Structural_Self-Modification_Preregistered_Test_v1.1.pdf
 │   ├── FELIX-C3_Level_4_RSI_Preregistered_Test_v1.3.pdf
 │   ├── FELIX-C7_External_Benchmark_Transfer_v1.1.pdf
-│   └── FELIX-v4_Self-Evolving_Organism_RSI_v1.0.pdf
+│   └── earlier/
+│       └── FELIX-v4_Self-Evolving_Organism_RSI_v1.0.pdf   # exploratory work before the programme
 ├── data/
 │   ├── README.md                 # sources, columns and how to verify
 │   ├── frmstats.py               # exact Wilcoxon and bootstrap (stdlib only)
@@ -209,11 +210,11 @@ that FELIX v4 is general intelligence.
 │   └── felix-v4_generational_fitness.csv
 ├── protocols/
 │   ├── README.md                 # status and results of follow-up tests T1–T3
+│   ├── OSF_REGISTRATION_TEMPLATE.md   # how to register future studies publicly
 │   ├── PREREGISTRATION.md        # the registered protocol (commit 4908d9b)
 │   ├── freeze/, results/         # freeze records; T1 results
 │   ├── analyze.py, power.py      # decision rules; power analysis
 │   └── power_results.txt, results_template.csv
-├── arxiv/                        # superseded draft, kept as a record (see its README)
 ├── .zenodo.json                  # metadata for Zenodo releases
 ├── CITATION.cff
 ├── LICENSE
