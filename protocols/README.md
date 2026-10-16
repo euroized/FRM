@@ -44,6 +44,7 @@ which T1 does not test.
 | [`analyze.py`](analyze.py) | Applies the registered decision rules (`--selftest` checks it on synthetic data) |
 | [`power.py`](power.py), [`power_results.txt`](power_results.txt) | Power analysis behind the seed counts |
 | [`results_template.csv`](results_template.csv) | The results format `analyze.py` reads |
+| [`OSF_REGISTRATION_TEMPLATE.md`](OSF_REGISTRATION_TEMPLATE.md) | Template and steps for registering future studies on OSF |
 
 ## Deviations and disclosures
 
