@@ -19,7 +19,7 @@ turns evidence into revisions is an explicit, versioned object called **Imp**.
 FRM rewrites Imp, including the part of Imp that does the rewriting.
 
 > **Start here.** The synthesis paper,
-> [*Reach, Not Judgement*](papers/FRM_Synthesis_Reach_Not_Judgement_v1.0.pdf),
+> [*Reach, Not Judgement*](papers/FRM_Synthesis_Reach_Not_Judgement_v1.1.pdf),
 > covers the whole programme in 23 pages. The individual studies are below.
 > Per-seed result tables are in [`data/`](data/) as CSV files, with a script
 > that recomputes the papers' statistics.
@@ -55,8 +55,8 @@ improvement loop learns transfers to real bugs, replicated three times.
 
 | Paper | Date | Pages | Read here | Source |
 |---|---|---|---|---|
-| **Reach, Not Judgement: What Nine Preregistered Studies Show About When Self-Modification Pays Off** (synthesis) | Oct 2026, v1.0 | 23 | [PDF](papers/FRM_Synthesis_Reach_Not_Judgement_v1.0.pdf) | This repository; not yet on Zenodo or arXiv |
-| Rewriting the Structure of Its Own Improvement Mechanism: A Preregistered Causal Test of Bounded Recursive Self-Improvement (FELIX-C9) | Oct 2026, v1.1 | 23 | [PDF](papers/FELIX-C9_Structural_Self-Modification_Preregistered_Test_v1.1.pdf) | This repository; not yet on Zenodo or arXiv |
+| **Reach, Not Judgement: What Nine Preregistered Studies Show About When Self-Modification Pays Off** (synthesis) | Oct 2026, v1.1 | 23 | [PDF](papers/FRM_Synthesis_Reach_Not_Judgement_v1.1.pdf) | DOI [10.5281/zenodo.23427841](https://doi.org/10.5281/zenodo.23427841) |
+| Rewriting the Structure of Its Own Improvement Mechanism: A Preregistered Causal Test of Bounded Recursive Self-Improvement (FELIX-C9) | Oct 2026, v1.2 | 25 | [PDF](papers/FELIX-C9_Structural_Self-Modification_Preregistered_Test_v1.2.pdf) | DOI [10.5281/zenodo.23427738](https://doi.org/10.5281/zenodo.23427738) |
 | Level-4 Bounded Recursive Self-Improvement under a Published Definition: A Preregistered Test of a Self-Referential Improvement Mechanism (FELIX-C3) | Oct 2026, v1.3 | 47 | [PDF](papers/FELIX-C3_Level_4_RSI_Preregistered_Test_v1.3.pdf) | [Zenodo](https://zenodo.org/records/23366534) · DOI [10.5281/zenodo.23366534](https://doi.org/10.5281/zenodo.23366534) |
 | Do Self-Improved Repair Policies Transfer to Real Bugs? A Preregistered External-Benchmark Test of a Level-4 Bounded Self-Improving System (FELIX-C7) | Oct 2026, v1.1 | 23 | [PDF](papers/FELIX-C7_External_Benchmark_Transfer_v1.1.pdf) | [Zenodo](https://zenodo.org/records/23366502) · DOI [10.5281/zenodo.23366502](https://doi.org/10.5281/zenodo.23366502) |
 | FELIX: A Self-Evolving Organism Demonstrating Reproducible Recursive Self-Improvement via Intergenerational Metabolic Selection | May 2026, v1.0 | 12 | [PDF](papers/earlier/FELIX-v4_Self-Evolving_Organism_RSI_v1.0.pdf) | [Zenodo](https://zenodo.org/records/20156848) · DOI [10.5281/zenodo.20156848](https://doi.org/10.5281/zenodo.20156848) |
@@ -147,6 +147,15 @@ held-out families or real bugs. A post-hoc analysis finds that no policy form
 transfers more than about 5 pp to unseen families, which places the limit in
 what the system observes.
 
+**Independent rerun.** The whole frozen C9 protocol (Gate 0, both campaigns and
+the 96 confirmatory missions) was rerun from the frozen sources on separate
+hardware. Gate 0 and campaign 0, including its adoption of the tree form,
+reproduced exactly, as did 74 of 96 confirmatory missions to the exact task
+count. Every criterion was met again: B-1 +2.73 pp (19/5, p = 0.0021), B-2
++3.44 pp (17/7, p = 0.0014). The rerun also found that one decoy learner ("l1")
+was not seeded, so missions using it are not bit-reproducible; this changed
+campaign 1's path but not its conclusion. Both are disclosed in C9 v1.2 §11.
+
 ### Follow-up test T1: the loop against outside baselines
 
 An independent follow-up registered in this repository
@@ -193,8 +202,8 @@ that FELIX v4 is general intelligence.
 ├── papers/
 │   ├── README.md                 # sources, versions and checksums
 │   ├── SHA256SUMS
-│   ├── FRM_Synthesis_Reach_Not_Judgement_v1.0.pdf
-│   ├── FELIX-C9_Structural_Self-Modification_Preregistered_Test_v1.1.pdf
+│   ├── FRM_Synthesis_Reach_Not_Judgement_v1.1.pdf
+│   ├── FELIX-C9_Structural_Self-Modification_Preregistered_Test_v1.2.pdf
 │   ├── FELIX-C3_Level_4_RSI_Preregistered_Test_v1.3.pdf
 │   ├── FELIX-C7_External_Benchmark_Transfer_v1.1.pdf
 │   └── earlier/
@@ -231,8 +240,7 @@ What you can check here:
 
 - **The papers are authentic.** The C3, C7 and v4 PDFs are byte-identical to
   their copies on Zenodo: each MD5 matches the checksum Zenodo publishes. The
-  synthesis and C9 PDFs are the author's release files and are not yet
-  deposited elsewhere. Every SHA-256 is in [`papers/SHA256SUMS`](papers/SHA256SUMS).
+  synthesis and C9 PDFs are byte-identical to their Zenodo records. Every SHA-256 is in [`papers/SHA256SUMS`](papers/SHA256SUMS).
 - **The statistics follow from the printed tables.**
   [`data/verify.py`](data/verify.py) recomputes the reported means, seed counts
   and exact Wilcoxon p-values from the per-seed CSVs of C3, C7 and C9.
@@ -267,7 +275,9 @@ paper, §11 of the C7 and C9 papers, and §14 of the synthesis.
 | FELIX-C7 | 1.1 | Added S7, the conditional replication on a later study's 72 end states. Nothing else changed. |
 | FELIX-C9 | 1.0 | Primary results. Not released publicly. |
 | FELIX-C9 | 1.1 | Added §8.3 (post-hoc: why the gain does not generalise) and Figure 5. |
+| FELIX-C9 | 1.2 | Added the independent rerun and the l1 determinism disclosure (§11), evaluation spend per arm, exact sampling probabilities, the two-campaign caveat, DOIs and ORCID. |
 | Synthesis | 1.0 | First release. |
+| Synthesis | 1.1 | Added the v9 rerun (§14), the two-campaign caveat, exact sampling probability, softened a classification claim, DOIs and ORCID. |
 | FELIX v4 | 1.0 | First release (Zenodo record 20156848). |
 
 ## Citation
@@ -278,8 +288,7 @@ Citation metadata is in [`CITATION.cff`](CITATION.cff). On GitHub, use the
 The repository itself is archived on Zenodo with each GitHub release. Its
 concept DOI, [10.5281/zenodo.23366848](https://doi.org/10.5281/zenodo.23366848),
 always resolves to the latest release. To cite a paper, use the paper's own
-DOI where it has one. The synthesis and C9 papers do not yet have DOIs; cite
-them as preprints until they do.
+DOI.
 
 ```bibtex
 @misc{felix2026synthesis,
@@ -288,8 +297,10 @@ them as preprints until they do.
             When Self-Modification Pays Off},
   year   = {2026},
   month  = oct,
-  note   = {Preprint, version 1.0},
-  url    = {https://github.com/recurse-root/FRMDevelopment}
+  publisher = {Zenodo},
+  version = {1.1},
+  doi    = {10.5281/zenodo.23427841},
+  url    = {https://doi.org/10.5281/zenodo.23427841}
 }
 
 @misc{felix2026structural,
@@ -298,8 +309,10 @@ them as preprints until they do.
             A Preregistered Causal Test of Bounded Recursive Self-Improvement},
   year   = {2026},
   month  = oct,
-  note   = {Preprint, version 1.1},
-  url    = {https://github.com/recurse-root/FRMDevelopment}
+  publisher = {Zenodo},
+  version = {1.2},
+  doi    = {10.5281/zenodo.23427738},
+  url    = {https://doi.org/10.5281/zenodo.23427738}
 }
 
 @misc{felix2026level4,
@@ -349,7 +362,7 @@ QuixBugs and HumanEvalFix, remain under their own licenses.
 ## Contact
 
 Junai P. Felix, Independent Researcher, Taipei, Taiwan
-[junai.felixx@gmail.com](mailto:junai.felixx@gmail.com)
+[junai.felixx@gmail.com](mailto:junai.felixx@gmail.com) · ORCID [0009-0006-1641-0399](https://orcid.org/0009-0006-1641-0399)
 
 The same author appears as *Junai Philip Felix* on Zenodo and as *Junai Felix*
 in the FELIX v4 paper.

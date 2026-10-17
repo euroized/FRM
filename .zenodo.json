@@ -4,7 +4,8 @@
   "creators": [
     {
       "name": "Felix, Junai P.",
-      "affiliation": "Independent Researcher, Taipei, Taiwan"
+      "affiliation": "Independent Researcher, Taipei, Taiwan",
+      "orcid": "0009-0006-1641-0399"
     }
   ],
   "description": "<p>Papers and results for FRM, the Felix Runtime Module, a bounded self-improving program-repair system tested in nine preregistered studies against a published Level-4 definition of recursive self-improvement. The repository holds the synthesis of the programme (<em>Reach, Not Judgement</em>), the Stage 3 (FELIX-C3) Level-4 test, the FELIX-C7 real-bug transfer study, the FELIX-C9 study of structural self-modification, per-seed result tables with a script that recomputes the reported statistics, a registered follow-up test (T1) with its results, and an earlier preprint on the FELIX v4 self-evolving organism.</p><p>Each release of this record archives the GitHub repository <a href=\"https://github.com/recurse-root/FRMDevelopment\">recurse-root/FRMDevelopment</a>. To cite a paper, use that paper's own DOI where it has one, listed in the repository README.</p>",
@@ -36,6 +37,18 @@
     },
     {
       "identifier": "10.5281/zenodo.20156847",
+      "relation": "isSupplementTo",
+      "scheme": "doi",
+      "resource_type": "publication-preprint"
+    },
+    {
+      "identifier": "10.5281/zenodo.23427738",
+      "relation": "isSupplementTo",
+      "scheme": "doi",
+      "resource_type": "publication-preprint"
+    },
+    {
+      "identifier": "10.5281/zenodo.23427841",
       "relation": "isSupplementTo",
       "scheme": "doi",
       "resource_type": "publication-preprint"
