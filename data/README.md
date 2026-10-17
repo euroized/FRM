@@ -9,7 +9,7 @@ rounding. Nothing here comes from the confidential audit packages.
 | [`felix-c3_per_seed_test_solve.csv`](felix-c3_per_seed_test_solve.csv) | FELIX-C3 v1.3, Appendix A, Table 24 (p. 44) | 24 confirmatory seeds (7101–7124) |
 | [`felix-c3_gate1_pilot.csv`](felix-c3_gate1_pilot.csv) | FELIX-C3 v1.3, §9.3, Table 10 (p. 18) | 8 pilot seeds (3201–3208) |
 | [`felix-c7_per_seed_bugs_solved.csv`](felix-c7_per_seed_bugs_solved.csv) | FELIX-C7 v1.1, Appendix A, Table 7 (p. 22) | 24 seeds (7101–7124) |
-| [`felix-c9_per_seed.csv`](felix-c9_per_seed.csv) | FELIX-C9 v1.1, Appendix A, Table 11 (p. 22) | 24 confirmatory seeds (7901–7924) |
+| [`felix-c9_per_seed.csv`](felix-c9_per_seed.csv) | FELIX-C9 v1.2, Appendix A, Table 11 (p. 24) | 24 confirmatory seeds (7901–7924) |
 | [`felix-v4_generational_fitness.csv`](felix-v4_generational_fitness.csv) | FELIX v4, §5.1, Table 1 (p. 7) | 5 runs |
 
 ## Columns
