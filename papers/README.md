@@ -6,7 +6,7 @@ from this directory.
 
 | File | Paper | Date | Pages | Source |
 |---|---|---|---|---|
-| [`FRM-11-12_Self-Obtained_Evidence-Driven_Not_Sustained_v1.0.pdf`](FRM-11-12_Self-Obtained_Evidence-Driven_Not_Sustained_v1.0.pdf) | Self-Obtained and Evidence-Driven, but Not Sustained: Two Preregistered Level-4 Tests of a Self-Editing Campaign Layer (FRM-11, FRM-12) | Oct 2026, v1.0 | 7 | This repository (not yet on Zenodo) |
+| [`FRM-11-12_Self-Obtained_Evidence-Driven_Not_Sustained_v1.0.pdf`](FRM-11-12_Self-Obtained_Evidence-Driven_Not_Sustained_v1.0.pdf) | Self-Obtained and Evidence-Driven, but Not Sustained: Two Preregistered Level-4 Tests of a Self-Editing Campaign Layer (FRM-11, FRM-12) | Oct 2026, v1.0 | 7 | [Zenodo 23733404](https://doi.org/10.5281/zenodo.23733404) |
 | [`FRM_Synthesis_Reach_Not_Judgement_v1.1.pdf`](FRM_Synthesis_Reach_Not_Judgement_v1.1.pdf) | Reach, Not Judgement: What Nine Preregistered Studies Show About When Self-Modification Pays Off | Oct 2026, v1.1 | 23 | [Zenodo 23427841](https://doi.org/10.5281/zenodo.23427841) |
 | [`FELIX-C9_Structural_Self-Modification_Preregistered_Test_v1.2.pdf`](FELIX-C9_Structural_Self-Modification_Preregistered_Test_v1.2.pdf) | Rewriting the Structure of Its Own Improvement Mechanism: A Preregistered Causal Test of Bounded Recursive Self-Improvement | Oct 2026, v1.2 | 25 | [Zenodo 23427738](https://doi.org/10.5281/zenodo.23427738) |
 | [`FELIX-C3_Level_4_RSI_Preregistered_Test_v1.3.pdf`](FELIX-C3_Level_4_RSI_Preregistered_Test_v1.3.pdf) | Level-4 Bounded Recursive Self-Improvement under a Published Definition: A Preregistered Test of a Self-Referential Improvement Mechanism | Oct 2026, v1.3 | 47 | [Zenodo 23366534](https://doi.org/10.5281/zenodo.23366534) |
@@ -26,7 +26,7 @@ from this directory.
 
 ## Notes
 
-- **FRM-11/12 v1.0.** Two later preregistered studies (not part of the synthesis) that replace FELIX-C9's campaign with a self-editing campaign layer. Both campaigns found the structural rewrite by their own evidence; it beat the default by +4.71 pp and +4.92 pp on separate fresh seeds and, against a repaired random-proposal control, by +4.69 pp. Both failed the sustained-progress criterion A-4, so the verdict is "B-1 pass but Tier A fails". Discloses a defective random control in FRM-11 and how FRM-12 repaired it. Protocols, freeze records and per-seed data are in `../protocols/` and `../data/`. Not yet deposited on Zenodo, so it has no DOI.
+- **FRM-11/12 v1.0.** Two later preregistered studies (not part of the synthesis) that replace FELIX-C9's campaign with a self-editing campaign layer. Both campaigns found the structural rewrite by their own evidence; it beat the default by +4.71 pp and +4.92 pp on separate fresh seeds and, against a repaired random-proposal control, by +4.69 pp. Both failed the sustained-progress criterion A-4, so the verdict is "B-1 pass but Tier A fails". Discloses a defective random control in FRM-11 and how FRM-12 repaired it. Protocols, freeze records and per-seed data are in `../protocols/` and `../data/`. Zenodo record 23733404, DOI 10.5281/zenodo.23733404; this file is byte-identical to the Zenodo file.
 - **Synthesis v1.1 (Reach, Not Judgement).** Covers all nine preregistered
   studies (v1–v7 and v9): writable generators, the Level-4 test and its five
   null causal tests, real-bug transfer, the bottleneck analysis, the C9

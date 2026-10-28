@@ -47,7 +47,8 @@ driven by evidence. Both studies still failed the ladder's sustained-progress
 criterion (A-4): the better mechanism converges within half a mission. Their
 preregistered verdict is "B-1 pass but Tier A fails", not "Level 4 with causal
 support", and the gain again did not reach held-out families
-([paper](papers/FRM-11-12_Self-Obtained_Evidence-Driven_Not_Sustained_v1.0.pdf), [results](protocols/FRM11_FRM12_RESULTS.md)).
+([paper](papers/FRM-11-12_Self-Obtained_Evidence-Driven_Not_Sustained_v1.0.pdf), DOI
+[10.5281/zenodo.23733404](https://doi.org/10.5281/zenodo.23733404); [results](protocols/FRM11_FRM12_RESULTS.md)).
 
 ### Names used here
 
@@ -66,7 +67,7 @@ support", and the gain again did not reach held-out families
 
 | Paper | Date | Pages | Read here | Source |
 |---|---|---|---|---|
-| Self-Obtained and Evidence-Driven, but Not Sustained: Two Preregistered Level-4 Tests of a Self-Editing Campaign Layer (FRM-11, FRM-12) | Oct 2026, v1.0 | 7 | [PDF](papers/FRM-11-12_Self-Obtained_Evidence-Driven_Not_Sustained_v1.0.pdf) | This repository |
+| Self-Obtained and Evidence-Driven, but Not Sustained: Two Preregistered Level-4 Tests of a Self-Editing Campaign Layer (FRM-11, FRM-12) | Oct 2026, v1.0 | 7 | [PDF](papers/FRM-11-12_Self-Obtained_Evidence-Driven_Not_Sustained_v1.0.pdf) | [Zenodo](https://zenodo.org/records/23733404) · DOI [10.5281/zenodo.23733404](https://doi.org/10.5281/zenodo.23733404) |
 | **Reach, Not Judgement: What Nine Preregistered Studies Show About When Self-Modification Pays Off** (synthesis) | Oct 2026, v1.1 | 23 | [PDF](papers/FRM_Synthesis_Reach_Not_Judgement_v1.1.pdf) | DOI [10.5281/zenodo.23427841](https://doi.org/10.5281/zenodo.23427841) |
 | Rewriting the Structure of Its Own Improvement Mechanism: A Preregistered Causal Test of Bounded Recursive Self-Improvement (FELIX-C9) | Oct 2026, v1.2 | 25 | [PDF](papers/FELIX-C9_Structural_Self-Modification_Preregistered_Test_v1.2.pdf) | DOI [10.5281/zenodo.23427738](https://doi.org/10.5281/zenodo.23427738) |
 | Level-4 Bounded Recursive Self-Improvement under a Published Definition: A Preregistered Test of a Self-Referential Improvement Mechanism (FELIX-C3) | Oct 2026, v1.3 | 47 | [PDF](papers/FELIX-C3_Level_4_RSI_Preregistered_Test_v1.3.pdf) | [Zenodo](https://zenodo.org/records/23366534) · DOI [10.5281/zenodo.23366534](https://doi.org/10.5281/zenodo.23366534) |
@@ -273,7 +274,8 @@ What you can check here:
 - **The papers are authentic.** The C3, C7 and v4 PDFs are byte-identical to
   their copies on Zenodo: each MD5 matches the checksum Zenodo publishes. The
   synthesis and C9 PDFs are byte-identical to their Zenodo records. The
-  FRM-11/12 paper is published here only. Every SHA-256 is in [`papers/SHA256SUMS`](papers/SHA256SUMS).
+  FRM-11/12 PDF is byte-identical to its Zenodo record (record 23733404;
+  MD5 `3095a1cbd1b78047dd016b2b07c3f5f0`). Every SHA-256 is in [`papers/SHA256SUMS`](papers/SHA256SUMS).
 - **The statistics follow from the printed tables.**
   [`data/verify.py`](data/verify.py) recomputes the reported means, seed counts
   and exact Wilcoxon p-values from the per-seed CSVs of C3, C7, C9, FRM-11
@@ -316,7 +318,7 @@ paper, §11 of the C7 and C9 papers, and §14 of the synthesis.
 | Synthesis | 1.0 | First release. |
 | Synthesis | 1.1 | Added the v9 rerun (§14), the two-campaign caveat, exact sampling probability, softened a classification claim, DOIs and ORCID. |
 | FELIX v4 | 1.0 | First release (Zenodo record 20156848). |
-| FRM-11/12 | 1.0 | First release, in this repository only (not yet on Zenodo). |
+| FRM-11/12 | 1.0 | First release (Zenodo record 23733404, 28 October 2026). |
 
 ## Citation
 
@@ -329,6 +331,18 @@ always resolves to the latest release. To cite a paper, use the paper's own
 DOI.
 
 ```bibtex
+@misc{felix2026frm1112,
+  author = {Felix, Junai P.},
+  title  = {Self-Obtained and Evidence-Driven, but Not Sustained:
+            Two Preregistered Level-4 Tests of a Self-Editing Campaign Layer},
+  year   = {2026},
+  month  = oct,
+  publisher = {Zenodo},
+  version = {1.0},
+  doi    = {10.5281/zenodo.23733404},
+  url    = {https://doi.org/10.5281/zenodo.23733404}
+}
+
 @misc{felix2026synthesis,
   author = {Felix, Junai P.},
   title  = {Reach, Not Judgement: What Nine Preregistered Studies Show About

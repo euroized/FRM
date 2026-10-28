@@ -49,6 +49,18 @@ preferred-citation:
   url: "https://zenodo.org/records/23366534"
 references:
   - type: article
+    title: "Self-Obtained and Evidence-Driven, but Not Sustained: Two Preregistered Level-4 Tests of a Self-Editing Campaign Layer"
+    authors:
+      - family-names: Felix
+        given-names: Junai P.
+    year: 2026
+    month: 10
+    version: "1.0"
+    publisher:
+      name: Zenodo
+    doi: "10.5281/zenodo.23733404"
+    url: "https://zenodo.org/records/23733404"
+  - type: article
     title: "Reach, Not Judgement: What Nine Preregistered Studies Show About When Self-Modification Pays Off"
     authors:
       - family-names: Felix
