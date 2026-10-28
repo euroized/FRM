@@ -2,15 +2,15 @@
 
 [![C3 paper DOI](https://img.shields.io/badge/C3_paper_DOI-10.5281%2Fzenodo.23366534-blue)](https://doi.org/10.5281/zenodo.23366534)
 [![Repository DOI](https://img.shields.io/badge/repository_DOI-10.5281%2Fzenodo.23366848-blue)](https://doi.org/10.5281/zenodo.23366848)
-[![Papers](https://img.shields.io/badge/papers-5-informational)](papers/)
+[![Papers](https://img.shields.io/badge/papers-6-informational)](papers/)
 ![Status](https://img.shields.io/badge/status-preprint-lightgrey)
 [![Check papers](https://github.com/recurse-root/FRMDevelopment/actions/workflows/check-papers.yml/badge.svg)](https://github.com/recurse-root/FRMDevelopment/actions/workflows/check-papers.yml)
 [![License: CC BY 4.0](https://img.shields.io/badge/License-CC_BY_4.0-lightgrey.svg)](LICENSE)
 
 Papers and results for **FRM** (Felix Runtime Module), a bounded
-self-improving program-repair system, and the programme of nine
-preregistered studies that tested it against a published Level-4 definition
-of recursive self-improvement (RSI).
+self-improving program-repair system, and the programme of preregistered
+studies (nine in the synthesis, two since) that tested it against a published
+Level-4 definition of recursive self-improvement (RSI).
 
 FRM runs inside a fixed boundary that it cannot change. In each round it
 proposes revisions of its own repair policy, screens them, and promotes a
@@ -38,6 +38,17 @@ against random rewriting (p = 0.0011). The gain held only in distribution: it
 was absent on held-out task families and on real bugs. Separately, what the
 improvement loop learns transfers to real bugs, replicated three times.
 
+Two later preregistered studies (FRM-11 and FRM-12) replaced FELIX-C9's
+campaign with a self-editing campaign layer. Both of its campaigns found the
+structural rewrite by their own evidence, and the rewrite beat the default by
++4.71 pp and +4.92 pp on separate fresh seeds (47 of 48 seeds). Against a
+random pick from the same proposals it won by +4.69 pp, so the choice was
+driven by evidence. Both studies still failed the ladder's sustained-progress
+criterion (A-4): the better mechanism converges within half a mission. Their
+preregistered verdict is "B-1 pass but Tier A fails", not "Level 4 with causal
+support", and the gain again did not reach held-out families
+([paper](papers/FRM-11-12_Self-Obtained_Evidence-Driven_Not_Sustained_v1.0.pdf), [results](protocols/FRM11_FRM12_RESULTS.md)).
+
 ### Names used here
 
 | Name | Meaning |
@@ -55,13 +66,14 @@ improvement loop learns transfers to real bugs, replicated three times.
 
 | Paper | Date | Pages | Read here | Source |
 |---|---|---|---|---|
+| Self-Obtained and Evidence-Driven, but Not Sustained: Two Preregistered Level-4 Tests of a Self-Editing Campaign Layer (FRM-11, FRM-12) | Oct 2026, v1.0 | 7 | [PDF](papers/FRM-11-12_Self-Obtained_Evidence-Driven_Not_Sustained_v1.0.pdf) | This repository |
 | **Reach, Not Judgement: What Nine Preregistered Studies Show About When Self-Modification Pays Off** (synthesis) | Oct 2026, v1.1 | 23 | [PDF](papers/FRM_Synthesis_Reach_Not_Judgement_v1.1.pdf) | DOI [10.5281/zenodo.23427841](https://doi.org/10.5281/zenodo.23427841) |
 | Rewriting the Structure of Its Own Improvement Mechanism: A Preregistered Causal Test of Bounded Recursive Self-Improvement (FELIX-C9) | Oct 2026, v1.2 | 25 | [PDF](papers/FELIX-C9_Structural_Self-Modification_Preregistered_Test_v1.2.pdf) | DOI [10.5281/zenodo.23427738](https://doi.org/10.5281/zenodo.23427738) |
 | Level-4 Bounded Recursive Self-Improvement under a Published Definition: A Preregistered Test of a Self-Referential Improvement Mechanism (FELIX-C3) | Oct 2026, v1.3 | 47 | [PDF](papers/FELIX-C3_Level_4_RSI_Preregistered_Test_v1.3.pdf) | [Zenodo](https://zenodo.org/records/23366534) · DOI [10.5281/zenodo.23366534](https://doi.org/10.5281/zenodo.23366534) |
 | Do Self-Improved Repair Policies Transfer to Real Bugs? A Preregistered External-Benchmark Test of a Level-4 Bounded Self-Improving System (FELIX-C7) | Oct 2026, v1.1 | 23 | [PDF](papers/FELIX-C7_External_Benchmark_Transfer_v1.1.pdf) | [Zenodo](https://zenodo.org/records/23366502) · DOI [10.5281/zenodo.23366502](https://doi.org/10.5281/zenodo.23366502) |
 | FELIX: A Self-Evolving Organism Demonstrating Reproducible Recursive Self-Improvement via Intergenerational Metabolic Selection | May 2026, v1.0 | 12 | [PDF](papers/earlier/FELIX-v4_Self-Evolving_Organism_RSI_v1.0.pdf) | [Zenodo](https://zenodo.org/records/20156848) · DOI [10.5281/zenodo.20156848](https://doi.org/10.5281/zenodo.20156848) |
 
-All five papers are preprints and have not been peer reviewed. The
+All six papers are preprints and have not been peer reviewed. The
 [`papers/`](papers/) folder holds every PDF; its [`README.md`](papers/README.md)
 lists each file's source, version notes and SHA-256 checksum.
 
@@ -217,6 +229,7 @@ that FELIX v4 is general intelligence.
 ├── papers/
 │   ├── README.md                 # sources, versions and checksums
 │   ├── SHA256SUMS
+│   ├── FRM-11-12_Self-Obtained_Evidence-Driven_Not_Sustained_v1.0.pdf
 │   ├── FRM_Synthesis_Reach_Not_Judgement_v1.1.pdf
 │   ├── FELIX-C9_Structural_Self-Modification_Preregistered_Test_v1.2.pdf
 │   ├── FELIX-C3_Level_4_RSI_Preregistered_Test_v1.3.pdf
@@ -259,7 +272,8 @@ What you can check here:
 
 - **The papers are authentic.** The C3, C7 and v4 PDFs are byte-identical to
   their copies on Zenodo: each MD5 matches the checksum Zenodo publishes. The
-  synthesis and C9 PDFs are byte-identical to their Zenodo records. Every SHA-256 is in [`papers/SHA256SUMS`](papers/SHA256SUMS).
+  synthesis and C9 PDFs are byte-identical to their Zenodo records. The
+  FRM-11/12 paper is published here only. Every SHA-256 is in [`papers/SHA256SUMS`](papers/SHA256SUMS).
 - **The statistics follow from the printed tables.**
   [`data/verify.py`](data/verify.py) recomputes the reported means, seed counts
   and exact Wilcoxon p-values from the per-seed CSVs of C3, C7, C9, FRM-11
@@ -302,6 +316,7 @@ paper, §11 of the C7 and C9 papers, and §14 of the synthesis.
 | Synthesis | 1.0 | First release. |
 | Synthesis | 1.1 | Added the v9 rerun (§14), the two-campaign caveat, exact sampling probability, softened a classification claim, DOIs and ORCID. |
 | FELIX v4 | 1.0 | First release (Zenodo record 20156848). |
+| FRM-11/12 | 1.0 | First release, in this repository only (not yet on Zenodo). |
 
 ## Citation
 
