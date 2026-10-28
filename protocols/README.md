@@ -13,6 +13,8 @@ was registered at commit `4908d9b`; each study's freeze record in
 | **T2** | What is the most any fixed Imp could be worth? | **Paused.** The configuration search finished; the confirmation was stopped at 33 of 48 missions to free compute, and can resume from checkpoints | No estimate is reported until the confirmation completes |
 | **T3** | Does rewriting Imp help over long, non-stationary missions? | **Not run** (the pilot is frozen, not started) | — |
 
+**FRM-11 and FRM-12** are later preregistered tests of FELIX-C9 with the FRM-10 campaign layer, against FELIX's Level-4 ladder. Both are complete, and both have the verdict **"B-1 pass but Tier A fails"**. The self-obtained rewrite beat the default Imp by +4.71 pp (FRM-11, 23/24 seeds) and +4.92 pp (FRM-12, 24/24), and in FRM-12 beat a random pick from the system's own proposals by +4.69 pp (22/0/2). Both failed A-4, sustained within-mission progress (+1.08 pp, p = 0.026; +0.81 pp, p = 0.021; the bar is p < 0.01). Neither showed a held-out gain. Full results, defects found and timings: [`FRM11_FRM12_RESULTS.md`](FRM11_FRM12_RESULTS.md).
+
 ## T1 in brief
 
 The loop is Stage 3 condition C6f: the improvement loop with Imp frozen. The
@@ -45,6 +47,9 @@ which T1 does not test.
 | [`power.py`](power.py), [`power_results.txt`](power_results.txt) | Power analysis behind the seed counts |
 | [`results_template.csv`](results_template.csv) | The results format `analyze.py` reads |
 | [`OSF_REGISTRATION_TEMPLATE.md`](OSF_REGISTRATION_TEMPLATE.md) | Template and steps for registering future studies on OSF |
+| [`FRM11_FRM12_RESULTS.md`](FRM11_FRM12_RESULTS.md) | FRM-11 and FRM-12: results, disclosed defects, registration timings |
+| [`frm11/`](frm11/), [`frm12/`](frm12/) | Their preregistrations, addenda, hashes and freeze records, byte-identical to the registered files |
+| `results/FRM11_*`, `results/FRM12_*` | Their evaluation output, ladders, Gate 1 record and restart log |
 
 ## Deviations and disclosures
 

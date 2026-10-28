@@ -1,0 +1,5 @@
+A300 (FRM-11)  A4 -0.16 pp [-3.75, 0.63, -1.56, 4.06] | E-D +4.38 | E r16 45.6 r32 45.5 | held-out E-D -0.31 | D A4 +1.48 | promos 6.5 | E min 19 D min 6
+A600           A4 +0.08 pp [0.62, -0.94, 0.62, 0.0] | E-D +4.22 | E r16 46.0 r32 46.1 | held-out E-D +0.00 | D A4 +1.72 | promos 7.2 | E min 19 D min 14
+A900           A4 -0.94 pp [-4.38, -2.19, 0.0, 2.81] | E-D +2.34 | E r16 46.0 r32 45.1 | held-out E-D -0.63 | D A4 +2.81 | promos 7.0 | E min 20 D min 14
+C16            A4 +0.86 pp [1.56, -0.94, 1.25, 1.56] | E-D +5.08 | E r16 44.9 r32 45.8 | held-out E-D +3.44 | D A4 +1.72 | promos 6.5 | E min 33 D min 28
+C16S192        A4 +2.27 pp [1.25, 4.06, 0.0, 3.75] | E-D +6.41 | E r16 46.1 r32 48.4 | held-out E-D +0.62 | D A4 +1.80 | promos 5.5 | E min 40 D min 31
