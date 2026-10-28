@@ -4,7 +4,7 @@
 [![Repository DOI](https://img.shields.io/badge/repository_DOI-10.5281%2Fzenodo.23366848-blue)](https://doi.org/10.5281/zenodo.23366848)
 [![Papers](https://img.shields.io/badge/papers-6-informational)](papers/)
 ![Status](https://img.shields.io/badge/status-preprint-lightgrey)
-[![Check papers](https://github.com/euroized/FRMDevelopment/actions/workflows/check-papers.yml/badge.svg)](https://github.com/euroized/FRMDevelopment/actions/workflows/check-papers.yml)
+[![Check papers](https://github.com/euroized/FRM/actions/workflows/check-papers.yml/badge.svg)](https://github.com/euroized/FRM/actions/workflows/check-papers.yml)
 [![License: CC BY 4.0](https://img.shields.io/badge/License-CC_BY_4.0-lightgrey.svg)](LICENSE)
 
 Papers and results for **FRM** (Felix Runtime Module), a bounded
