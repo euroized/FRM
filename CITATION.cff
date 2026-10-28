@@ -9,7 +9,7 @@ authors:
     affiliation: "Independent Researcher, Taipei, Taiwan"
     orcid: "https://orcid.org/0009-0006-1641-0399"
 license: CC-BY-4.0
-repository-code: "https://github.com/euroized/FRMDevelopment"
+repository-code: "https://github.com/euroized/FRM"
 doi: "10.5281/zenodo.23366848"
 identifiers:
   - type: doi
