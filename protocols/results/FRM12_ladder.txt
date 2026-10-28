@@ -1,0 +1,17 @@
+Level-4 ladder (FRM-12)
+  PASS  A-1 promotions                   24/24 E missions
+  PASS  A-2 campaigns commit (FRM-11)    c0: 2, c1: 1
+  PASS  A-3 self-referential (FRM-11)    editing procedure in the genome
+  FAIL  A-4 sustained progress           +0.81 pp, p = 0.021, 13/6/5
+  PASS  A-5 integrity                    72/72 reconciled
+  PASS  Headroom D <= 0.85               D = 0.4059
+  PASS  Autonomy                         0 interventions
+  PASS  B-1 rewriting pays off (E - D)   +4.92 pp, p = 6e-08, 24/0/0
+  PASS  B-2 evidence matters (E - R)     +4.69 pp, p = 2.4e-07, 22/0/2
+  PASS  SO-1 campaign 0 (E - D)          +4.92 pp, p = 0.00024, 12/0/0
+  PASS  SO-1 campaign 1 (E - D)          +4.92 pp, p = 0.00024, 12/0/0
+  FAIL  H-1 held-out (E - D)             -1.30 pp, p = 0.92, 9/12/3
+  FAIL  H-2 held-out (E - R)             -0.73 pp, p = 0.76, 8/11/5
+
+Verdict: B-1 pass but Tier A fails
+Claims: L4_in_distribution = False, L4_self_obtained = False, L4_transfers_heldout = False

@@ -167,6 +167,21 @@ p = 6 × 10⁻⁸. The baselines spent more evaluations than the loop. Follow-up
 T2 is paused part-way and T3 has not been run; see
 [`protocols/README.md`](protocols/README.md).
 
+### FRM-11 and FRM-12: the FRM-10 campaign on FELIX's Level-4 ladder
+
+Two later preregistered tests replaced FELIX-C9's campaign with the FRM-10 campaign layer: an archive of variants, a self-editing improver, and a fixed gate. FELIX-C9's mission code was unchanged.
+
+| | FRM-11 (campaigns + confirmatory) | FRM-12 (confirm-only, wider search) |
+|---|---|---|
+| Campaigns | Both independently committed the tree learner | (FRM-11's Imps reused) |
+| B-1 evolved − default | **+4.71 pp**, 23/24, p = 1.2 × 10⁻⁷ | **+4.92 pp**, 24/24, p = 6 × 10⁻⁸ |
+| B-2 evolved − evidence-free control | +5.00 pp (control was in fact the default; see the results file) | **+4.69 pp**, 22/0/2, p = 2.4 × 10⁻⁷ |
+| A-4 sustained progress (bar: p < 0.01) | +1.08 pp, p = 0.026 ✗ | +0.81 pp, p = 0.021 ✗ |
+| Held-out families, evolved − default | −1.67 pp | −1.30 pp |
+| **Verdict** | **B-1 pass but Tier A fails** | **B-1 pass but Tier A fails** |
+
+The self-obtained rewrite causes a large gain that replicates, and the choice is driven by evidence. But the tree learner converges within half a mission, so A-4 fails, and neither study supports "Level 4 with causal support". See [`protocols/FRM11_FRM12_RESULTS.md`](protocols/FRM11_FRM12_RESULTS.md).
+
 ### Earlier work: FELIX v4 organism (May 2026)
 
 > **How to read this paper.** FELIX v4 is exploratory work that came before
@@ -216,12 +231,16 @@ that FELIX v4 is general intelligence.
 │   ├── felix-c3_gate1_pilot.csv
 │   ├── felix-c7_per_seed_bugs_solved.csv
 │   ├── felix-c9_per_seed.csv
-│   └── felix-v4_generational_fitness.csv
+│   ├── felix-v4_generational_fitness.csv
+│   ├── frm11_per_seed.csv
+│   └── frm12_per_seed.csv
 ├── protocols/
 │   ├── README.md                 # status and results of follow-up tests T1–T3
 │   ├── OSF_REGISTRATION_TEMPLATE.md   # how to register future studies publicly
 │   ├── PREREGISTRATION.md        # the registered protocol (commit 4908d9b)
-│   ├── freeze/, results/         # freeze records; T1 results
+│   ├── freeze/, results/         # freeze records; T1, FRM-11 and FRM-12 results
+│   ├── frm11/, frm12/            # FRM-11 and FRM-12 preregistrations and freeze records
+│   ├── FRM11_FRM12_RESULTS.md    # their results
 │   ├── analyze.py, power.py      # decision rules; power analysis
 │   └── power_results.txt, results_template.csv
 ├── .zenodo.json                  # metadata for Zenodo releases
@@ -243,9 +262,13 @@ What you can check here:
   synthesis and C9 PDFs are byte-identical to their Zenodo records. Every SHA-256 is in [`papers/SHA256SUMS`](papers/SHA256SUMS).
 - **The statistics follow from the printed tables.**
   [`data/verify.py`](data/verify.py) recomputes the reported means, seed counts
-  and exact Wilcoxon p-values from the per-seed CSVs of C3, C7 and C9.
+  and exact Wilcoxon p-values from the per-seed CSVs of C3, C7, C9, FRM-11
+  and FRM-12.
 - **Follow-up test T1** is registered here, with its freeze records written
   before its missions ran.
+- **FRM-11 and FRM-12** publish their preregistrations byte-identical to the
+  files registered in a private repository before their data existed, with
+  per-seed results that `data/verify.py` checks.
 
 What you cannot check here:
 

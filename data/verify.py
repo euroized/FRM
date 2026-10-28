@@ -15,6 +15,7 @@ from the reported ones in the last printed digit, and p-values from rounded
 inputs are compared within a tolerance.
 """
 import csv
+import json
 import math
 import sys
 from pathlib import Path
@@ -181,6 +182,26 @@ for row in v4:
     check_ratio(f"{row['run']} gain G0->G1 (%)", b, a, float(row["delta_g0_g1_pct"]))
     check_ratio(f"{row['run']} gain G0->G2 (%)", c, a, float(row["delta_g0_g2_pct"]))
 check("mean delta G0->G2 (%)", mean(col(v4, "delta_g0_g2_pct")), 129.7, 0.051)
+
+# FRM-11 and FRM-12 (protocols/frm11, protocols/frm12) ------------------------
+# The reported values are the runs' own results files, so these checks are exact up to the CSVs' 6 decimals.
+for study, csv_name, res_name, seed0 in [("FRM-11", "frm11_per_seed.csv", "FRM11_results.json", 9201),
+                                         ("FRM-12", "frm12_per_seed.csv", "FRM12_results.json", 9301)]:
+    print(f"{study} confirmatory (protocols/results/{res_name})")
+    rows = load(csv_name)
+    with open(DATA.parent / "protocols" / "results" / res_name) as f:
+        res = json.load(f)
+    check_eq("seeds", [int(r["seed"]) for r in rows], list(range(seed0, seed0 + 24)))
+    pp = lambda a, b: [100 * (float(r[a]) - float(r[b])) for r in rows]  # noqa: E731
+    heldout = res.get("H1_E_minus_D_heldout") or res["reported"]["E_minus_D_heldout"]
+    for label, d, rep in [("B-1 E - D", pp("E_r32", "D_r32"), res["B1_rewriting_pays_off"]),
+                          ("B-2 E - R", pp("E_r32", "R_r32"), res["B2_evidence_matters"]),
+                          ("A-4 E r32 - r16", pp("E_r32", "E_r16"), res["A4_sustained_progress"]),
+                          ("held-out E - D", pp("E_heldout_r32", "D_heldout_r32"), heldout)]:
+        check(f"{label} mean (pp)", mean(d), 100 * rep["mean"], 0.0001)
+        check_eq(f"{label} seeds +/-/0", list(signs([round(x, 6) for x in d])), rep["pos_neg_zero"])
+        check_p(f"{label} one-sided Wilcoxon", wilcoxon_upper(d), rep["wilcoxon_p"])
+    check_eq("verdict", res["verdict"], "B-1 pass but Tier A fails")
 
 print()
 if failures:

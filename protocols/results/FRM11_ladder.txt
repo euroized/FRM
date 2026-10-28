@@ -1,0 +1,12 @@
+Level-4 ladder
+  PASS  A-1 promotions                   24/24 E missions
+  PASS  A-2 campaigns commit             c0: 2, c1: 1
+  PASS  A-3 self-referential             mechanism self-edited: c0: False, c1: True
+  FAIL  A-4 sustained progress           +1.08 pp, p = 0.026
+  PASS  A-5 integrity                    72/72 reconciled, replay True
+  PASS  Headroom D <= 0.85               D = 0.4057
+  PASS  Autonomy                         0 interventions
+  PASS  B-1 rewriting pays off (E - D)   +4.71 pp, p = 1.2e-07
+  PASS  B-2 evidence matters (E - R)     +5.00 pp, p = 6e-08
+
+Verdict: B-1 pass but Tier A fails

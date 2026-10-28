@@ -1,0 +1,2 @@
+{"utc": "2026-10-28T00:14:54Z", "event": "container restart", "completed": 20, "partial": 4, "not_started": 48, "last_done": "D_9307 2026-10-28T00:11:39Z", "action": "resumed crash-only from checkpoints; no mission dropped or rerun selectively"}
+{"utc": "2026-10-28T02:52:19Z", "event": "session worker restart (processes stopped)", "completed": 48, "partial": 4, "not_started": 20, "checksum_bad": 0, "action": "resumed crash-only from checkpoints; no mission dropped or rerun selectively"}

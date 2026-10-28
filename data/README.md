@@ -11,8 +11,12 @@ rounding. Nothing here comes from the confidential audit packages.
 | [`felix-c7_per_seed_bugs_solved.csv`](felix-c7_per_seed_bugs_solved.csv) | FELIX-C7 v1.1, Appendix A, Table 7 (p. 22) | 24 seeds (7101–7124) |
 | [`felix-c9_per_seed.csv`](felix-c9_per_seed.csv) | FELIX-C9 v1.2, Appendix A, Table 11 (p. 24) | 24 confirmatory seeds (7901–7924) |
 | [`felix-v4_generational_fitness.csv`](felix-v4_generational_fitness.csv) | FELIX v4, §5.1, Table 1 (p. 7) | 5 runs |
+| [`frm11_per_seed.csv`](frm11_per_seed.csv) | FRM-11 mission records ([`protocols/FRM11_FRM12_RESULTS.md`](../protocols/FRM11_FRM12_RESULTS.md)) | 24 confirmatory seeds (9201–9224) |
+| [`frm12_per_seed.csv`](frm12_per_seed.csv) | FRM-12 mission records (same) | 24 confirmatory seeds (9301–9324) |
 
 ## Columns
+
+**`frm11_per_seed.csv`, `frm12_per_seed.csv`**: unlike the tables above, these come straight from the mission records, as fractions to 6 decimals (exact: 320 test tasks, 80 held-out). For each arm (E evolved Imp, D default Imp, R evidence-free control): `*_r16` and `*_r32` are the test solve rate at rounds 16 and 32; `*_heldout_r32` is the round-32 rate on the 4 held-out families; `*_accepted` is the number of promotions. `campaign` = seed index mod 2.
 
 **`felix-c3_per_seed_test_solve.csv`**: test solve rate in percent on the
 seed's 320 test tasks, printed to 0.1. The conditions are C6 (Imp
@@ -77,6 +81,7 @@ are:
   contrasts P1, S1, S2, S4 and S5, and for C9 criteria B-1 and B-2, the
   per-campaign split, T − D, E − T, R − D and the S-3 real-bug contrasts
 - the v4 generational gains
+- for FRM-11 and FRM-12: B-1, B-2, A-4 and held-out E − D (means, seed signs and exact p-values) and each study's verdict, against its own results file in `protocols/results/`
 
 ```
 python3 data/verify.py
